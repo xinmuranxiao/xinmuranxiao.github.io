@@ -1,0 +1,54 @@
+name: Deploy Hugo site to Pages
+
+# 触发条件：推送到 main 分支时自动部署
+on:
+  push:
+    branches:
+      - main  # 如果你用的是 master 分支，就改成 master
+  workflow_dispatch:  # 允许手动触发部署
+
+# 设置权限，让 Actions 能部署 Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 只允许一个并发部署
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: true  # 如果主题是通过 git submodule 添加的，必须开启
+          fetch-depth: 0    # 让 Hugo 能获取所有 git 历史（用于日期等）
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.157.0'  # 和你本地版本保持一致
+          extended: true           # 必须开启，否则无法处理 SCSS 等资源
+
+      - name: Build
+        run: hugo --gc --minify  # 清理缓存 + 压缩资源，和你本地构建命令一致
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public  # 上传 Hugo 生成的 public 文件夹
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build  # 等待 build 完成后再部署
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: peaceiris/actions-gh-pages@v4
