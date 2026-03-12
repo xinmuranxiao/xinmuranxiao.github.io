@@ -1,34 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>My New Hugo Project</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content from My New Hugo Project</description>
-    <generator>Hugo</generator>
-    <language>zh-CN</language>
-    
-    <managingEditor>xxx@example.com (D-Sketon)</managingEditor>
-    <webMaster>xxx@example.com (D-Sketon)</webMaster>
-    
-    <copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright>
-    
-    <lastBuildDate>Wed, 11 Mar 2026 02:00:00 +0800</lastBuildDate>
-    
-    
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss&#43;xml" />
-    
-
-    
-    
-
-    <item>
-      <title>20260311总结</title>
-      <link>http://localhost:1313/post/2026-03-11-%E6%80%BB%E7%BB%93/</link>
-      <pubDate>Wed, 11 Mar 2026 21:00:00 &#43;0800</pubDate>
-      <author>xxx@example.com (D-Sketon)</author>
-      <guid>http://localhost:1313/post/2026-03-11-%E6%80%BB%E7%BB%93/</guid>
-      <description>
-        <![CDATA[<h1>20260311总结</h1><p>作者：D-Sketon（xxx@example.com）</p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>My New Hugo Project</title><link>https://xinmuranxiao.github.io/</link><description>Recent content from My New Hugo Project</description><generator>Hugo</generator><language>zh-CN</language><managingEditor>xxx@example.com (D-Sketon)</managingEditor><webMaster>xxx@example.com (D-Sketon)</webMaster><copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright><lastBuildDate>Wed, 11 Mar 2026 02:00:00 +0800</lastBuildDate><atom:link href="https://xinmuranxiao.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>20260311总结</title><link>https://xinmuranxiao.github.io/post/2026-03-11-%E6%80%BB%E7%BB%93/</link><pubDate>Wed, 11 Mar 2026 21:00:00 +0800</pubDate><author>xxx@example.com (D-Sketon)</author><guid>https://xinmuranxiao.github.io/post/2026-03-11-%E6%80%BB%E7%BB%93/</guid><description>
+<![CDATA[<h1>20260311总结</h1><p>作者：D-Sketon（xxx@example.com）</p>
         
           <h1 id="一熟悉了git以及各种乱七八糟的玩意终于在网页显示了笔记二字">
 <a class="header-anchor" href="#%e4%b8%80%e7%86%9f%e6%82%89%e4%ba%86git%e4%bb%a5%e5%8f%8a%e5%90%84%e7%a7%8d%e4%b9%b1%e4%b8%83%e5%85%ab%e7%b3%9f%e7%9a%84%e7%8e%a9%e6%84%8f%e7%bb%88%e4%ba%8e%e5%9c%a8%e7%bd%91%e9%a1%b5%e6%98%be%e7%a4%ba%e4%ba%86%e7%ac%94%e8%ae%b0%e4%ba%8c%e5%ad%97"></a>
@@ -41,21 +12,8 @@
 1)创建：
 </h2><p>都使用指针，创建两个指针指向数据体和结构</p>
         
-        <hr><p>本文2026-03-11首发于<a href='http://localhost:1313/'>My New Hugo Project</a>，最后修改于2026-03-11</p>]]>
-      </description>
-      
-    </item>
-    
-    
-
-    <item>
-      <title>20260310总结</title>
-      <link>http://localhost:1313/post/2026-03-10-%E6%80%BB%E7%BB%93/</link>
-      <pubDate>Tue, 10 Mar 2026 12:00:00 &#43;0800</pubDate>
-      <author>xxx@example.com (D-Sketon)</author>
-      <guid>http://localhost:1313/post/2026-03-10-%E6%80%BB%E7%BB%93/</guid>
-      <description>
-        <![CDATA[<h1>20260310总结</h1><p>作者：D-Sketon（xxx@example.com）</p>
+        <hr><p>本文2026-03-11首发于<a href='https://xinmuranxiao.github.io/'>My New Hugo Project</a>，最后修改于2026-03-11</p>]]></description></item><item><title>20260310总结</title><link>https://xinmuranxiao.github.io/post/2026-03-10-%E6%80%BB%E7%BB%93/</link><pubDate>Tue, 10 Mar 2026 12:00:00 +0800</pubDate><author>xxx@example.com (D-Sketon)</author><guid>https://xinmuranxiao.github.io/post/2026-03-10-%E6%80%BB%E7%BB%93/</guid><description>
+<![CDATA[<h1>20260310总结</h1><p>作者：D-Sketon（xxx@example.com）</p>
         
           <h1 id="一二进制和位运算1-7">
 <a class="header-anchor" href="#%e4%b8%80%e4%ba%8c%e8%bf%9b%e5%88%b6%e5%92%8c%e4%bd%8d%e8%bf%90%e7%ae%971-7"></a>
@@ -72,10 +30,4 @@
 1)无符号
 </h3><p>直接所有为数权重相加(只有正数)</p>
         
-        <hr><p>本文2026-03-10首发于<a href='http://localhost:1313/'>My New Hugo Project</a>，最后修改于2026-03-10</p>]]>
-      </description>
-      
-    </item>
-    
-  </channel>
-</rss>
+        <hr><p>本文2026-03-10首发于<a href='https://xinmuranxiao.github.io/'>My New Hugo Project</a>，最后修改于2026-03-10</p>]]></description></item></channel></rss>
