@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Project</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content from My New Hugo Project</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    
+    <managingEditor>xxx@example.com (D-Sketon)</managingEditor>
+    <webMaster>xxx@example.com (D-Sketon)</webMaster>
+    
+    <copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright>
+    
+    <lastBuildDate>Wed, 11 Mar 2026 02:00:00 +0800</lastBuildDate>
+    
+    
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss&#43;xml" />
+    
+
+    
+    
+
+    <item>
+      <title>20260311总结</title>
+      <link>http://localhost:1313/post/2026-03-11-%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Wed, 11 Mar 2026 21:00:00 &#43;0800</pubDate>
+      <author>xxx@example.com (D-Sketon)</author>
+      <guid>http://localhost:1313/post/2026-03-11-%E6%80%BB%E7%BB%93/</guid>
+      <description>
+        <![CDATA[<h1>20260311总结</h1><p>作者：D-Sketon（xxx@example.com）</p>
+        
+          <h1 id="一熟悉了git以及各种乱七八糟的玩意终于在网页显示了笔记二字">
+<a class="header-anchor" href="#%e4%b8%80%e7%86%9f%e6%82%89%e4%ba%86git%e4%bb%a5%e5%8f%8a%e5%90%84%e7%a7%8d%e4%b9%b1%e4%b8%83%e5%85%ab%e7%b3%9f%e7%9a%84%e7%8e%a9%e6%84%8f%e7%bb%88%e4%ba%8e%e5%9c%a8%e7%bd%91%e9%a1%b5%e6%98%be%e7%a4%ba%e4%ba%86%e7%ac%94%e8%ae%b0%e4%ba%8c%e5%ad%97"></a>
+一、熟悉了git,以及各种乱七八糟的玩意，终于在网页显示了&quot;笔记&quot;二字😭！
+</h1><h1 id="二写了数据结构的线性表的创建末端增加插入删除查看释放">
+<a class="header-anchor" href="#%e4%ba%8c%e5%86%99%e4%ba%86%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84%e7%9a%84%e7%ba%bf%e6%80%a7%e8%a1%a8%e7%9a%84%e5%88%9b%e5%bb%ba%e6%9c%ab%e7%ab%af%e5%a2%9e%e5%8a%a0%e6%8f%92%e5%85%a5%e5%88%a0%e9%99%a4%e6%9f%a5%e7%9c%8b%e9%87%8a%e6%94%be"></a>
+二、写了数据结构的线性表的创建，末端增加，插入，删除，查看，释放，
+</h1><h2 id="1创建">
+<a class="header-anchor" href="#1%e5%88%9b%e5%bb%ba"></a>
+1)创建：
+</h2><p>都使用指针，创建两个指针指向数据体和结构</p>
+        
+        <hr><p>本文2026-03-11首发于<a href='http://localhost:1313/'>My New Hugo Project</a>，最后修改于2026-03-11</p>]]>
+      </description>
+      
+    </item>
+    
+    
+
+    <item>
+      <title>20260310总结</title>
+      <link>http://localhost:1313/post/2026-03-10-%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Tue, 10 Mar 2026 12:00:00 &#43;0800</pubDate>
+      <author>xxx@example.com (D-Sketon)</author>
+      <guid>http://localhost:1313/post/2026-03-10-%E6%80%BB%E7%BB%93/</guid>
+      <description>
+        <![CDATA[<h1>20260310总结</h1><p>作者：D-Sketon（xxx@example.com）</p>
+        
+          <h1 id="一二进制和位运算1-7">
+<a class="header-anchor" href="#%e4%b8%80%e4%ba%8c%e8%bf%9b%e5%88%b6%e5%92%8c%e4%bd%8d%e8%bf%90%e7%ae%971-7"></a>
+一、二进制和位运算(1-7)
+</h1><h2 id="1二进制的概念">
+<a class="header-anchor" href="#1%e4%ba%8c%e8%bf%9b%e5%88%b6%e7%9a%84%e6%a6%82%e5%bf%b5"></a>
+1.二进制的概念
+</h2><p>类比十进制，二进制逢二进一，只含有01</p>
+<h2 id="2正负数的表达">
+<a class="header-anchor" href="#2%e6%ad%a3%e8%b4%9f%e6%95%b0%e7%9a%84%e8%a1%a8%e8%be%be"></a>
+2.正负数的表达
+</h2><h3 id="1无符号">
+<a class="header-anchor" href="#1%e6%97%a0%e7%ac%a6%e5%8f%b7"></a>
+1)无符号
+</h3><p>直接所有为数权重相加(只有正数)</p>
+        
+        <hr><p>本文2026-03-10首发于<a href='http://localhost:1313/'>My New Hugo Project</a>，最后修改于2026-03-10</p>]]>
+      </description>
+      
+    </item>
+    
+  </channel>
+</rss>
