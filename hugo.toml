@@ -1,7 +1,7 @@
 baseURL = 'https://xinmuranxiao.github.io/'
 theme = "hugo-theme-reimu" 
 
-title = 'My New Hugo Project'
+title = 'My Notes'
 languageCode = 'zh-CN'
 defaultContentLanguage = 'zh-CN'
 [languages]
