@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Project</title>
+    <title>My Notes</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content from My New Hugo Project</description>
+    <description>Recent content from My Notes</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     
@@ -12,12 +12,63 @@
     
     <copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright>
     
-    <lastBuildDate>Thu, 12 Mar 2026 14:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 13 Mar 2026 21:00:00 +0800</lastBuildDate>
     
     
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss&#43;xml" />
     
 
+    
+    
+
+    <item>
+      <title>20260313总结</title>
+      <link>http://localhost:1313/post/2026-03-13-%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Fri, 13 Mar 2026 08:00:00 &#43;0800</pubDate>
+      <author>xxx@example.com (D-Sketon)</author>
+      <guid>http://localhost:1313/post/2026-03-13-%E6%80%BB%E7%BB%93/</guid>
+      <description>
+        <![CDATA[<h1>20260313总结</h1><p>作者：D-Sketon（xxx@example.com）</p>
+        
+          <h1 id="一数据结构二叉树b站的逊老师">
+<a class="header-anchor" href="#%e4%b8%80%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84%e4%ba%8c%e5%8f%89%e6%a0%91b%e7%ab%99%e7%9a%84%e9%80%8a%e8%80%81%e5%b8%88"></a>
+一、数据结构(二叉树)//b站的逊老师
+</h1><h2 id="1树的定义">
+<a class="header-anchor" href="#1%e6%a0%91%e7%9a%84%e5%ae%9a%e4%b9%89"></a>
+1)树的定义
+</h2><p>一个或多个结点的有限集合<br>
+存在一个根，特定结点<br>
+每个结点互不相交</p>
+<h3 id="1结点">
+<a class="header-anchor" href="#1%e7%bb%93%e7%82%b9"></a>
+1.结点：
+</h3><p>树中的一个独立单元</p>
+        
+        <hr><p>本文2026-03-13首发于<a href='http://localhost:1313/'>My Notes</a>，最后修改于2026-03-13</p>]]>
+      </description>
+      
+    </item>
+    
+    
+
+    <item>
+      <title>20260312总结</title>
+      <link>http://localhost:1313/post/2026-03-12-%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Thu, 12 Mar 2026 21:00:00 &#43;0800</pubDate>
+      <author>xxx@example.com (D-Sketon)</author>
+      <guid>http://localhost:1313/post/2026-03-12-%E6%80%BB%E7%BB%93/</guid>
+      <description>
+        <![CDATA[<h1>20260312总结</h1><p>作者：D-Sketon（xxx@example.com）</p>
+        
+          <h1 id="一数据结构链表">
+<a class="header-anchor" href="#%e4%b8%80%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84%e9%93%be%e8%a1%a8"></a>
+一、数据结构(链表)
+</h1><p>见https://github.com/xinmuranxiao/DataStruct_DoublyLinkedList</p>
+        
+        <hr><p>本文2026-03-12首发于<a href='http://localhost:1313/'>My Notes</a>，最后修改于2026-03-12</p>]]>
+      </description>
+      
+    </item>
     
     
 
@@ -39,10 +90,10 @@ xinmuranxiao.github.io
 </h3><h2 id="2026310">
 <a class="header-anchor" href="#2026310"></a>
 2026.3.10
-</h2><p>第一次写有点紧张；就将这个仓库浅浅的记录一下我每天的学习。
+</h2><p>第一次写有点紧张；就将这个仓库浅浅的记录一下我每天的学习。<br>
 1.学习了b站的up左程云的算法入门1、3(1-7)</p>
         
-        <hr><p>本文2026-03-12首发于<a href='http://localhost:1313/'>My New Hugo Project</a>，最后修改于2026-03-12</p>]]>
+        <hr><p>本文2026-03-12首发于<a href='http://localhost:1313/'>My Notes</a>，最后修改于2026-03-12</p>]]>
       </description>
       
     </item>
@@ -69,7 +120,7 @@ xinmuranxiao.github.io
 1)创建：
 </h2><p>都使用指针，创建两个指针指向数据体和结构</p>
         
-        <hr><p>本文2026-03-11首发于<a href='http://localhost:1313/'>My New Hugo Project</a>，最后修改于2026-03-11</p>]]>
+        <hr><p>本文2026-03-11首发于<a href='http://localhost:1313/'>My Notes</a>，最后修改于2026-03-11</p>]]>
       </description>
       
     </item>
@@ -100,7 +151,7 @@ xinmuranxiao.github.io
 1)无符号
 </h3><p>直接所有为数权重相加(只有正数)</p>
         
-        <hr><p>本文2026-03-10首发于<a href='http://localhost:1313/'>My New Hugo Project</a>，最后修改于2026-03-10</p>]]>
+        <hr><p>本文2026-03-10首发于<a href='http://localhost:1313/'>My Notes</a>，最后修改于2026-03-10</p>]]>
       </description>
       
     </item>
