@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>My Notes</title>
-    <link>http://localhost:1313/</link>
+    <link>http://localhost:6551/</link>
     <description>Recent content from My Notes</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
@@ -12,72 +12,21 @@
     
     <copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright>
     
-    <lastBuildDate>Fri, 13 Mar 2026 21:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 14 Mar 2026 21:00:00 +0800</lastBuildDate>
     
     
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss&#43;xml" />
-    
-
-    
+    <atom:link href="http://localhost:6551/index.xml" rel="self" type="application/rss&#43;xml" />
     
 
-    <item>
-      <title>20260313总结</title>
-      <link>http://localhost:1313/post/2026-03-13-%E6%80%BB%E7%BB%93/</link>
-      <pubDate>Fri, 13 Mar 2026 08:00:00 &#43;0800</pubDate>
-      <author>xxx@example.com (D-Sketon)</author>
-      <guid>http://localhost:1313/post/2026-03-13-%E6%80%BB%E7%BB%93/</guid>
-      <description>
-        <![CDATA[<h1>20260313总结</h1><p>作者：D-Sketon（xxx@example.com）</p>
-        
-          <h1 id="一数据结构二叉树b站的逊老师">
-<a class="header-anchor" href="#%e4%b8%80%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84%e4%ba%8c%e5%8f%89%e6%a0%91b%e7%ab%99%e7%9a%84%e9%80%8a%e8%80%81%e5%b8%88"></a>
-一、数据结构(二叉树)//b站的逊老师
-</h1><h2 id="1树的定义">
-<a class="header-anchor" href="#1%e6%a0%91%e7%9a%84%e5%ae%9a%e4%b9%89"></a>
-1)树的定义
-</h2><p>一个或多个结点的有限集合<br>
-存在一个根，特定结点<br>
-每个结点互不相交</p>
-<h3 id="1结点">
-<a class="header-anchor" href="#1%e7%bb%93%e7%82%b9"></a>
-1.结点：
-</h3><p>树中的一个独立单元</p>
-        
-        <hr><p>本文2026-03-13首发于<a href='http://localhost:1313/'>My Notes</a>，最后修改于2026-03-13</p>]]>
-      </description>
-      
-    </item>
-    
-    
-
-    <item>
-      <title>20260312总结</title>
-      <link>http://localhost:1313/post/2026-03-12-%E6%80%BB%E7%BB%93/</link>
-      <pubDate>Thu, 12 Mar 2026 21:00:00 &#43;0800</pubDate>
-      <author>xxx@example.com (D-Sketon)</author>
-      <guid>http://localhost:1313/post/2026-03-12-%E6%80%BB%E7%BB%93/</guid>
-      <description>
-        <![CDATA[<h1>20260312总结</h1><p>作者：D-Sketon（xxx@example.com）</p>
-        
-          <h1 id="一数据结构链表">
-<a class="header-anchor" href="#%e4%b8%80%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84%e9%93%be%e8%a1%a8"></a>
-一、数据结构(链表)
-</h1><p>见https://github.com/xinmuranxiao/DataStruct_DoublyLinkedList</p>
-        
-        <hr><p>本文2026-03-12首发于<a href='http://localhost:1313/'>My Notes</a>，最后修改于2026-03-12</p>]]>
-      </description>
-      
-    </item>
     
     
 
     <item>
       <title>文章总览</title>
-      <link>http://localhost:1313/post/2026-03%E6%80%BB%E7%BB%93/</link>
-      <pubDate>Thu, 12 Mar 2026 14:00:00 &#43;0800</pubDate>
+      <link>http://localhost:6551/post/2026-03%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Mon, 09 Mar 2026 14:00:00 &#43;0800</pubDate>
       <author>xxx@example.com (D-Sketon)</author>
-      <guid>http://localhost:1313/post/2026-03%E6%80%BB%E7%BB%93/</guid>
+      <guid>http://localhost:6551/post/2026-03%E6%80%BB%E7%BB%93/</guid>
       <description>
         <![CDATA[<h1>文章总览</h1><p>作者：D-Sketon（xxx@example.com）</p>
         
@@ -90,10 +39,154 @@ xinmuranxiao.github.io
 </h3><h2 id="2026310">
 <a class="header-anchor" href="#2026310"></a>
 2026.3.10
-</h2><p>第一次写有点紧张；就将这个仓库浅浅的记录一下我每天的学习。<br>
-1.学习了b站的up左程云的算法入门1、3(1-7)</p>
+</h2><ul>
+<li>第一次写有点紧张；就将这个仓库浅浅的记录一下我每天的学习。</li>
+<li>1.学习了b站的up左程云的算法入门1、3(1-7)</li>
+</ul>
+<h2 id="2026311">
+<a class="header-anchor" href="#2026311"></a>
+2026.3.11
+</h2><ul>
+<li>1.熟悉了git,以及各种乱七八糟的玩意，终于在网页显示了&quot;笔记&quot;二字😭！</li>
+<li>2.写了数据结构的线性表的创建，末端增加，插入，删除，查看，释放。</li>
+<li>3.学习了b站的up左程云的算法入门3(8-12)、5</li>
+</ul>
+<h2 id="2026312">
+<a class="header-anchor" href="#2026312"></a>
+2026.3.12
+</h2><ul>
+<li>1.数据结构(链表)</li>
+<li>2.套了个框架，然后就有了这个。</li>
+<li>3.数据结构(二叉树)(定义)</li>
+</ul>
+<h2 id="2026313">
+<a class="header-anchor" href="#2026313"></a>
+2026.3.13
+</h2><ul>
+<li>1.数据结构(二叉树)//b站的逊老师</li>
+<li>2.一些小问题(class VS struct&amp;&amp;map VS pair)</li>
+<li>3.c++(参数模版化和类模版的继承)</li>
+</ul>
+<h2 id="2026314">
+<a class="header-anchor" href="#2026314"></a>
+2026.3.14
+</h2><ul>
+<li>1.数据结构(线性表cpp)</li>
+<li>2.一些小问题(throw VS return(返回错误))</li>
+</ul>
+<h1 id="我的个人博客">
+<a class="header-anchor" href="#%e6%88%91%e7%9a%84%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2"></a>
+我的个人博客
+</h1><p>本博客基于 Hugo 静态站点生成器开发，使用 D-Sketon 开发的 hugo-theme-reimu 主题模板。</p>
         
-        <hr><p>本文2026-03-12首发于<a href='http://localhost:1313/'>My Notes</a>，最后修改于2026-03-12</p>]]>
+        <hr><p>本文2026-03-09首发于<a href='http://localhost:6551/'>My Notes</a>，最后修改于2026-03-14</p>]]>
+      </description>
+      
+    </item>
+    
+    
+
+    <item>
+      <title>20260314总结</title>
+      <link>http://localhost:6551/post/2026-03-14-%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Sat, 14 Mar 2026 08:00:00 &#43;0800</pubDate>
+      <author>xxx@example.com (D-Sketon)</author>
+      <guid>http://localhost:6551/post/2026-03-14-%E6%80%BB%E7%BB%93/</guid>
+      <description>
+        <![CDATA[<h1>20260314总结</h1><p>作者：D-Sketon（xxx@example.com）</p>
+        
+          <h1 id="一尝试使用模版的方式构建线性表">
+<a class="header-anchor" href="#%e4%b8%80%e5%b0%9d%e8%af%95%e4%bd%bf%e7%94%a8%e6%a8%a1%e7%89%88%e7%9a%84%e6%96%b9%e5%bc%8f%e6%9e%84%e5%bb%ba%e7%ba%bf%e6%80%a7%e8%a1%a8"></a>
+一、尝试使用模版的方式构建线性表
+</h1><h2 id="2结构">
+<a class="header-anchor" href="#2%e7%bb%93%e6%9e%84"></a>
+(2)结构：
+</h2><div class="highlight" linenumbers="true"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">T</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">SeqList</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">	<span class="n">SeqList</span><span class="p">(</span><span class="kt">int</span> <span class="n">size_</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="nf">getSize</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="o">~</span><span class="n">SeqList</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="k">private</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">int</span> <span class="n">capacity</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">arr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div><h1 id="二小问题">
+<a class="header-anchor" href="#%e4%ba%8c%e5%b0%8f%e9%97%ae%e9%a2%98"></a>
+二、小问题
+</h1><h2 id="1throw-vs-return-错误返回">
+<a class="header-anchor" href="#1throw-vs-return-%e9%94%99%e8%af%af%e8%bf%94%e5%9b%9e"></a>
+(1)throw VS return 错误返回
+</h2><h3 id="1return">
+<a class="header-anchor" href="#1return"></a>
+1.return
+</h3><ul>
+<li>1.返回错误码（最基础，C 风格）</li>
+<li>2.返回 pair/tuple（用来返回结果+错误信息(cpp11+)）</li>
+<li>3.输出参数 + 返回值（适合需要返回核心数据的场景）</li>
+</ul>
+<h3 id="2throwcpp首选">
+<a class="header-anchor" href="#2throwcpp%e9%a6%96%e9%80%89"></a>
+2.throw(cpp首选)
+</h3><p>处理不可预期、会中断流程的致命错误（适用于自定义返回错误）</p>
+        
+        <hr><p>本文2026-03-14首发于<a href='http://localhost:6551/'>My Notes</a>，最后修改于2026-03-14</p>]]>
+      </description>
+      
+    </item>
+    
+    
+
+    <item>
+      <title>20260313总结</title>
+      <link>http://localhost:6551/post/2026-03-13-%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Fri, 13 Mar 2026 08:00:00 &#43;0800</pubDate>
+      <author>xxx@example.com (D-Sketon)</author>
+      <guid>http://localhost:6551/post/2026-03-13-%E6%80%BB%E7%BB%93/</guid>
+      <description>
+        <![CDATA[<h1>20260313总结</h1><p>作者：D-Sketon（xxx@example.com）</p>
+        
+          <h1 id="一数据结构二叉树b站的逊老师">
+<a class="header-anchor" href="#%e4%b8%80%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84%e4%ba%8c%e5%8f%89%e6%a0%91b%e7%ab%99%e7%9a%84%e9%80%8a%e8%80%81%e5%b8%88"></a>
+一、数据结构(二叉树)//b站的逊老师
+</h1><h2 id="1树的定义">
+<a class="header-anchor" href="#1%e6%a0%91%e7%9a%84%e5%ae%9a%e4%b9%89"></a>
+(1)树的定义
+</h2><ul>
+<li>一个或多个结点的有限集合</li>
+<li>存在一个根，特定结点</li>
+<li>每个结点互不相交</li>
+</ul>
+<h3 id="1结点">
+<a class="header-anchor" href="#1%e7%bb%93%e7%82%b9"></a>
+1.结点：
+</h3><p>树中的一个独立单元</p>
+        
+        <hr><p>本文2026-03-13首发于<a href='http://localhost:6551/'>My Notes</a>，最后修改于2026-03-13</p>]]>
+      </description>
+      
+    </item>
+    
+    
+
+    <item>
+      <title>20260312总结</title>
+      <link>http://localhost:6551/post/2026-03-12-%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Thu, 12 Mar 2026 21:00:00 &#43;0800</pubDate>
+      <author>xxx@example.com (D-Sketon)</author>
+      <guid>http://localhost:6551/post/2026-03-12-%E6%80%BB%E7%BB%93/</guid>
+      <description>
+        <![CDATA[<h1>20260312总结</h1><p>作者：D-Sketon（xxx@example.com）</p>
+        
+          <h1 id="一数据结构链表">
+<a class="header-anchor" href="#%e4%b8%80%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84%e9%93%be%e8%a1%a8"></a>
+一、数据结构(链表)
+</h1><p>见https://github.com/xinmuranxiao/DataStruct_DoublyLinkedList</p>
+        
+        <hr><p>本文2026-03-12首发于<a href='http://localhost:6551/'>My Notes</a>，最后修改于2026-03-12</p>]]>
       </description>
       
     </item>
@@ -102,10 +195,10 @@ xinmuranxiao.github.io
 
     <item>
       <title>20260311总结</title>
-      <link>http://localhost:1313/post/2026-03-11-%E6%80%BB%E7%BB%93/</link>
+      <link>http://localhost:6551/post/2026-03-11-%E6%80%BB%E7%BB%93/</link>
       <pubDate>Wed, 11 Mar 2026 21:00:00 &#43;0800</pubDate>
       <author>xxx@example.com (D-Sketon)</author>
-      <guid>http://localhost:1313/post/2026-03-11-%E6%80%BB%E7%BB%93/</guid>
+      <guid>http://localhost:6551/post/2026-03-11-%E6%80%BB%E7%BB%93/</guid>
       <description>
         <![CDATA[<h1>20260311总结</h1><p>作者：D-Sketon（xxx@example.com）</p>
         
@@ -117,10 +210,10 @@ xinmuranxiao.github.io
 二、写了数据结构的线性表的创建，末端增加，插入，删除，查看，释放，
 </h1><h2 id="1创建">
 <a class="header-anchor" href="#1%e5%88%9b%e5%bb%ba"></a>
-1)创建：
+(1)创建：
 </h2><p>都使用指针，创建两个指针指向数据体和结构</p>
         
-        <hr><p>本文2026-03-11首发于<a href='http://localhost:1313/'>My Notes</a>，最后修改于2026-03-11</p>]]>
+        <hr><p>本文2026-03-11首发于<a href='http://localhost:6551/'>My Notes</a>，最后修改于2026-03-11</p>]]>
       </description>
       
     </item>
@@ -129,10 +222,10 @@ xinmuranxiao.github.io
 
     <item>
       <title>20260310总结</title>
-      <link>http://localhost:1313/post/2026-03-10-%E6%80%BB%E7%BB%93/</link>
+      <link>http://localhost:6551/post/2026-03-10-%E6%80%BB%E7%BB%93/</link>
       <pubDate>Tue, 10 Mar 2026 12:00:00 &#43;0800</pubDate>
       <author>xxx@example.com (D-Sketon)</author>
-      <guid>http://localhost:1313/post/2026-03-10-%E6%80%BB%E7%BB%93/</guid>
+      <guid>http://localhost:6551/post/2026-03-10-%E6%80%BB%E7%BB%93/</guid>
       <description>
         <![CDATA[<h1>20260310总结</h1><p>作者：D-Sketon（xxx@example.com）</p>
         
@@ -148,10 +241,10 @@ xinmuranxiao.github.io
 2.正负数的表达
 </h2><h3 id="1无符号">
 <a class="header-anchor" href="#1%e6%97%a0%e7%ac%a6%e5%8f%b7"></a>
-1)无符号
+(1)无符号
 </h3><p>直接所有为数权重相加(只有正数)</p>
         
-        <hr><p>本文2026-03-10首发于<a href='http://localhost:1313/'>My Notes</a>，最后修改于2026-03-10</p>]]>
+        <hr><p>本文2026-03-10首发于<a href='http://localhost:6551/'>My Notes</a>，最后修改于2026-03-10</p>]]>
       </description>
       
     </item>
