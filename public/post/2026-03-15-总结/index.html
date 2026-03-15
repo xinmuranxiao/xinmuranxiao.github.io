@@ -8,9 +8,9 @@
   name="viewport"
   content="width=device-width, initial-scale=1, shrink-to-fit=no"
 /><title>
-  20260312总结 | D-Sketon
+  20260315总结 | D-Sketon
 </title>
-<meta name="description" content="20260312"/><script>
+<meta name="description" content="20260315"/><script>
   window.siteConfig = JSON.parse("{\"anchor_icon\":null,\"base\":\"http://localhost:1313/\",\"clipboard\":{\"copyright\":{\"count\":50,\"enable\":false,\"license_type\":\"by-nc-sa\"},\"fail\":{\"en\":\"Copy failed (ﾟ⊿ﾟ)ﾂ\",\"ja\":\"コピー失敗 (ﾟ⊿ﾟ)ﾂ\",\"pt-br\":\"Falha ao copiar (ﾟ⊿ﾟ)ﾂ\",\"zh-cn\":\"复制失败 (ﾟ⊿ﾟ)ﾂ\",\"zh-tw\":\"複製失敗 (ﾟ⊿ﾟ)ﾂ\"},\"success\":{\"en\":\"Copy successfully (*^▽^*)\",\"ja\":\"コピー成功 (*^▽^*)\",\"pt-br\":\"Copiado com sucesso (*^▽^*)\",\"zh-cn\":\"复制成功 (*^▽^*)\",\"zh-tw\":\"複製成功 (*^▽^*)\"}},\"code_block\":{\"expand\":true},\"icon_font\":\"4552607_4k4bc36ef96\",\"outdate\":{\"daysago\":180,\"enable\":false,\"message\":{\"en\":\"This article was last updated on {time}. Please note that the content may no longer be applicable.\",\"ja\":\"この記事は最終更新日：{time}。記載内容が現在有効でない可能性がありますのでご注意ください。\",\"pt-br\":\"Este artigo foi atualizado pela última vez em {time}. Observe que o conteúdo pode não ser mais aplicável.\",\"zh-cn\":\"本文最后更新于 {time}，请注意文中内容可能已不适用。\",\"zh-tw\":\"本文最後更新於 {time}，請注意文中內容可能已不適用。\"}}}");
   
 </script>
@@ -33,20 +33,20 @@
     type="font/woff2"
     crossorigin="anonymous"
   /><link rel="stylesheet" href="/css/loader.css" /><meta property="og:type" content="website" />
-  <meta property="og:title" content="20260312总结 | D-Sketon" />
+  <meta property="og:title" content="20260315总结 | D-Sketon" />
   <meta
     property="og:description"
-    content="20260312"
+    content="20260315"
   />
-  <meta property="og:url" content="http://localhost:1313/post/2026-03-12-%E6%80%BB%E7%BB%93/" />
+  <meta property="og:url" content="http://localhost:1313/post/2026-03-15-%E6%80%BB%E7%BB%93/" />
   <meta
     property="og:site_name"
     content="My Notes"
   />
   <meta property="og:image" content="http://localhost:1313/images/banner.webp" />
   <meta property="article:author" content="D-Sketon" />
-  <meta property="article:published_time" content="2026-03-12T21:00:00&#43;08:00" />
-  <meta property="article:modified_time" content="2026-03-12T21:00:00&#43;08:00" /><meta name="twitter:card" content="summary" /><meta name="twitter:image" content="http://localhost:1313/images/banner.webp" />
+  <meta property="article:published_time" content="2026-03-15T08:00:00&#43;08:00" />
+  <meta property="article:modified_time" content="2026-03-15T21:00:00&#43;08:00" /><meta name="twitter:card" content="summary" /><meta name="twitter:image" content="http://localhost:1313/images/banner.webp" />
 <link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" href="/css/main.css" /><link
     rel="preload"
     as="style"
@@ -121,9 +121,9 @@
       </a><a id="main-nav-toggle" class="nav-icon" aria-label="Toggle navigation" role="button"></a>
   </nav>
   <nav id="sub-nav" aria-label="Secondary navigation"></nav></div>
-<header id="header" aria-label="Site header"><picture></picture><img  fetchpriority="high" src="/images/banner.webp" alt="20260312总结"><div id="header-outer">
+<header id="header" aria-label="Site header"><picture></picture><img  fetchpriority="high" src="/images/banner.webp" alt="20260315总结"><div id="header-outer">
     <div id="header-title"><span id="logo">
-            <h1 data-aos="slide-up">20260312总结</h1>
+            <h1 data-aos="slide-up">20260315总结</h1>
           </span><h2 id="subtitle-wrap" data-aos="slide-down"></h2></div>
   </div>
 </header><div id="content"
@@ -137,8 +137,18 @@
 <div class="sidebar-toc-wrapper toc-div-class">
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#定义">定义</a></li>
-    <li><a href="#代码">代码：</a></li>
+    <li><a href="#1gcd最大公因数">(1)gcd(最大公因数)</a>
+      <ul>
+        <li><a href="#1while循环">1.while循环</a></li>
+        <li><a href="#2递归">2.递归</a></li>
+      </ul>
+    </li>
+    <li><a href="#2使用pair存储分数中重载运算符需使用gcd函数cpp14以上好像支出原生gcd">(2)使用pair存储分数中重载运算符(需使用gcd函数(cpp14以上好像支出原生gcd))</a>
+      <ul>
+        <li><a href="#heading">+：</a></li>
+        <li><a href="#heading-1">*：</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 </div></div>
@@ -210,36 +220,58 @@
     class="article-date-link icon-calendar"
     data-aos="zoom-in"
   >
-    <time datetime="2026-03-12 21:00:00 &#43;0800 CST" itemprop="datePublished"
-      >2026-03-12</time
+    <time datetime="2026-03-15 08:00:00 &#43;0800 CST" itemprop="datePublished"
+      >2026-03-15</time
     >
     <time style="display: none;" id="post-update-time"
-      >2026-03-12</time
+      >2026-03-15</time
     >
   </span></div>
-</div><div class="hr-line"></div><div class="e-content article-entry" itemprop="articleBody"><h1 id="一数据结构链表">
-<a class="header-anchor" href="#%e4%b8%80%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84%e9%93%be%e8%a1%a8"></a>
-一、数据结构(链表)
-</h1><p>见https://github.com/xinmuranxiao/DataStruct_DoublyLinkedList</p>
-<h1 id="二套了个框架然后就有了这个">
-<a class="header-anchor" href="#%e4%ba%8c%e5%a5%97%e4%ba%86%e4%b8%aa%e6%a1%86%e6%9e%b6%e7%84%b6%e5%90%8e%e5%b0%b1%e6%9c%89%e4%ba%86%e8%bf%99%e4%b8%aa"></a>
-二、套了个框架，然后就有了这个。
-</h1><h1 id="三数据结构二叉树">
-<a class="header-anchor" href="#%e4%b8%89%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84%e4%ba%8c%e5%8f%89%e6%a0%91"></a>
-三、数据结构(二叉树)
-</h1><h2 id="定义">
-<a class="header-anchor" href="#%e5%ae%9a%e4%b9%89"></a>
-定义
-</h2><p>只有两个分支的树</p>
-<h2 id="代码">
-<a class="header-anchor" href="#%e4%bb%a3%e7%a0%81"></a>
-代码：
-</h2><div class="highlight" linenumbers="true"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">T</span><span class="o">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">twoTree</span><span class="p">{</span>
-</span></span><span class="line"><span class="cl"><span class="k">private</span><span class="o">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">twoTree</span><span class="o">*</span> <span class="n">left</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">twoTree</span><span class="o">*</span> <span class="n">right</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">T</span> <span class="n">data</span><span class="p">;</span>
+</div><div class="hr-line"></div><div class="e-content article-entry" itemprop="articleBody"><h1 id="一算法">
+<a class="header-anchor" href="#%e4%b8%80%e7%ae%97%e6%b3%95"></a>
+一、算法
+</h1><h2 id="1gcd最大公因数">
+<a class="header-anchor" href="#1gcd%e6%9c%80%e5%a4%a7%e5%85%ac%e5%9b%a0%e6%95%b0"></a>
+(1)gcd(最大公因数)
+</h2><h3 id="1while循环">
+<a class="header-anchor" href="#1while%e5%be%aa%e7%8e%af"></a>
+1.while循环
+</h3><div class="highlight" linenumbers="true"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">T</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">T</span> <span class="n">gcd</span><span class="p">(</span><span class="n">T</span> <span class="n">i</span><span class="p">,</span><span class="n">T</span> <span class="n">j</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span><span class="p">(</span><span class="n">i</span><span class="o">!=</span><span class="mi">0</span><span class="p">){</span><span class="c1">//使用辗转相除
+</span></span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">temp</span><span class="o">=</span><span class="n">j</span><span class="o">%</span><span class="n">i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">j</span><span class="o">=</span><span class="n">i</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">i</span><span class="o">=</span><span class="n">temp</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">j</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="2递归">
+<a class="header-anchor" href="#2%e9%80%92%e5%bd%92"></a>
+2.递归
+</h3><div class="highlight" linenumbers="true"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">T</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">T</span> <span class="n">gcd</span><span class="p">(</span><span class="n">T</span> <span class="n">a</span><span class="p">,</span> <span class="n">T</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">?</span> <span class="nl">a</span> <span class="p">:</span> <span class="n">gcd</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">%</span> <span class="n">b</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="2使用pair存储分数中重载运算符需使用gcd函数cpp14以上好像支出原生gcd">
+<a class="header-anchor" href="#2%e4%bd%bf%e7%94%a8pair%e5%ad%98%e5%82%a8%e5%88%86%e6%95%b0%e4%b8%ad%e9%87%8d%e8%bd%bd%e8%bf%90%e7%ae%97%e7%ac%a6%e9%9c%80%e4%bd%bf%e7%94%a8gcd%e5%87%bd%e6%95%b0cpp14%e4%bb%a5%e4%b8%8a%e5%a5%bd%e5%83%8f%e6%94%af%e5%87%ba%e5%8e%9f%e7%94%9fgcd"></a>
+(2)使用pair存储分数中重载运算符(需使用gcd函数(cpp14以上好像支出原生gcd))
+</h2><h3 id="heading">
+<a class="header-anchor" href="#heading"></a>
++：
+</h3><div class="highlight" linenumbers="true"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">T</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">pair</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="n">T</span><span class="o">&gt;</span> <span class="k">operator</span><span class="o">+</span><span class="p">(</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">a</span><span class="p">,</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">b</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="n">T</span> <span class="n">g</span><span class="o">=</span><span class="n">gcd</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">first</span><span class="o">*</span><span class="n">b</span><span class="p">.</span><span class="n">second</span><span class="o">+</span><span class="n">a</span><span class="p">.</span><span class="n">second</span><span class="o">*</span><span class="n">b</span><span class="p">.</span><span class="n">first</span><span class="p">,</span><span class="n">a</span><span class="p">.</span><span class="n">second</span><span class="o">*</span><span class="n">b</span><span class="p">.</span><span class="n">second</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pair</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="n">T</span><span class="o">&gt;</span><span class="n">f</span><span class="o">=</span><span class="p">{(</span><span class="n">a</span><span class="p">.</span><span class="n">first</span><span class="o">*</span><span class="n">b</span><span class="p">.</span><span class="n">second</span><span class="o">+</span><span class="n">a</span><span class="p">.</span><span class="n">second</span><span class="o">*</span><span class="n">b</span><span class="p">.</span><span class="n">first</span><span class="p">)</span><span class="o">/</span><span class="n">g</span><span class="p">,</span><span class="n">a</span><span class="p">.</span><span class="n">second</span><span class="o">*</span><span class="n">b</span><span class="p">.</span><span class="n">second</span><span class="o">/</span><span class="n">g</span><span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">f</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="heading-1">
+<a class="header-anchor" href="#heading-1"></a>
+*：
+</h3><div class="highlight" linenumbers="true"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">T</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">pair</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="n">T</span><span class="o">&gt;</span> <span class="k">operator</span><span class="o">*</span><span class="p">(</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">a</span><span class="p">,</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">b</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="n">T</span> <span class="n">g</span><span class="o">=</span><span class="n">gcd</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">first</span><span class="o">*</span><span class="n">b</span><span class="p">.</span><span class="n">first</span><span class="p">,</span><span class="n">a</span><span class="p">.</span><span class="n">second</span><span class="o">*</span><span class="n">b</span><span class="p">.</span><span class="n">second</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pair</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="n">T</span><span class="o">&gt;</span><span class="n">f</span><span class="o">=</span><span class="p">{</span><span class="n">a</span><span class="p">.</span><span class="n">first</span><span class="o">*</span><span class="n">b</span><span class="p">.</span><span class="n">first</span><span class="o">/</span><span class="n">g</span><span class="p">,</span><span class="n">a</span><span class="p">.</span><span class="n">second</span><span class="o">*</span><span class="n">b</span><span class="p">.</span><span class="n">second</span><span class="o">/</span><span class="n">g</span><span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">f</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div></div>
     <footer class="article-footer"><ul class="article-category-list"></ul>
@@ -252,27 +284,15 @@
   ><div class="article-nav-link-wrap left"><img
               data-src="https://d-sketon.top/img/_backwebp/bg1.webp"
               data-sizes="auto"
-              alt="20260311总结"
+              alt="2026-06目标"
               class="lazyload"
             /><a
-          href="/post/2026-03-11-%E6%80%BB%E7%BB%93/"
-          aria-label="前一篇:20260311总结"
-          title="前一篇:20260311总结"
+          href="/post/2026-03-2026-07%E7%9B%AE%E6%A0%87/"
+          aria-label="前一篇:2026-06目标"
+          title="前一篇:2026-06目标"
         ></a>
         <div class="article-nav-caption">前一篇</div>
-        <h3 class="article-nav-title">20260311总结</h3>
-      </div><div class="article-nav-link-wrap right"><img
-              data-src="https://d-sketon.top/img/_backwebp/bg1.webp"
-              data-sizes="auto"
-              alt="20260313总结"
-              class="lazyload"
-            /><a
-          href="/post/2026-03-13-%E6%80%BB%E7%BB%93/"
-          aria-label="后一篇:20260313总结"
-          title="后一篇:20260313总结"
-        ></a>
-        <div class="article-nav-caption">后一篇</div>
-        <h3 class="article-nav-title">20260313总结</h3>
+        <h3 class="article-nav-title">2026-06目标</h3>
       </div></nav></article></section>
         </div><footer id="footer" aria-label="Site footer">
   <div style="width: 100%; overflow: hidden">
@@ -323,8 +343,18 @@
 <div class="sidebar-toc-wrapper toc-div-class">
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#定义">定义</a></li>
-    <li><a href="#代码">代码：</a></li>
+    <li><a href="#1gcd最大公因数">(1)gcd(最大公因数)</a>
+      <ul>
+        <li><a href="#1while循环">1.while循环</a></li>
+        <li><a href="#2递归">2.递归</a></li>
+      </ul>
+    </li>
+    <li><a href="#2使用pair存储分数中重载运算符需使用gcd函数cpp14以上好像支出原生gcd">(2)使用pair存储分数中重载运算符(需使用gcd函数(cpp14以上好像支出原生gcd))</a>
+      <ul>
+        <li><a href="#heading">+：</a></li>
+        <li><a href="#heading-1">*：</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 </div></div>
@@ -430,9 +460,9 @@
   <div><script data-pjax>
         window.REIMU_POST = {
           author: "D-Sketon",
-          title: "20260312总结",
-          url: "http:\/\/localhost:1313\/post\/2026-03-12-%E6%80%BB%E7%BB%93\/",
-          description: "20260312",
+          title: "20260315总结",
+          url: "http:\/\/localhost:1313\/post\/2026-03-15-%E6%80%BB%E7%BB%93\/",
+          description: "20260315",
           cover: "http:\/\/localhost:1313\/images\/banner.webp",
         };
       </script><script src="/js/insert_highlight.js" data-pjax ></script><script src="/js/tabs.js" data-pjax defer></script><script type="module" data-pjax>const PhotoSwipeLightbox = (await safeImport("https:\/\/npm.webcache.cn\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js", "sha384-DiL6M\/gG\u002bwmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF\/N6lrZi\/")).default;const initPswp = (gallery, children) => {
