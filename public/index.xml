@@ -12,12 +12,84 @@
     
     <copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright>
     
-    <lastBuildDate>Sun, 15 Mar 2026 21:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 17 Mar 2026 21:00:00 +0800</lastBuildDate>
     
     
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss&#43;xml" />
     
 
+    
+    
+
+    <item>
+      <title>20260317总结</title>
+      <link>http://localhost:1313/post/2026-03-17-%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Tue, 17 Mar 2026 08:00:00 &#43;0800</pubDate>
+      <author>xxx@example.com (D-Sketon)</author>
+      <guid>http://localhost:1313/post/2026-03-17-%E6%80%BB%E7%BB%93/</guid>
+      <description>
+        <![CDATA[<h1>20260317总结</h1><p>作者：D-Sketon（xxx@example.com）</p>
+        
+          <h1 id="一异常">
+<a class="header-anchor" href="#%e4%b8%80%e5%bc%82%e5%b8%b8"></a>
+一、异常
+</h1><h2 id="1传递">
+<a class="header-anchor" href="#1%e4%bc%a0%e9%80%92"></a>
+(1)传递
+</h2><ul>
+<li>一层一层向上传递</li>
+</ul>
+<h2 id="2结束">
+<a class="header-anchor" href="#2%e7%bb%93%e6%9d%9f"></a>
+(2)结束
+</h2><h3 id="1到main函数仍未捕获">
+<a class="header-anchor" href="#1%e5%88%b0main%e5%87%bd%e6%95%b0%e4%bb%8d%e6%9c%aa%e6%8d%95%e8%8e%b7"></a>
+1.到main函数仍未捕获
+</h3><p>直接崩溃</p>
+<h3 id="2捕获">
+<a class="header-anchor" href="#2%e6%8d%95%e8%8e%b7"></a>
+2.捕获
+</h3><p>处理异常</p>
+        
+        <hr><p>本文2026-03-17首发于<a href='http://localhost:1313/'>My Notes</a>，最后修改于2026-03-17</p>]]>
+      </description>
+      
+    </item>
+    
+    
+
+    <item>
+      <title>20260316总结</title>
+      <link>http://localhost:1313/post/2026-03-16-%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Mon, 16 Mar 2026 08:00:00 &#43;0800</pubDate>
+      <author>xxx@example.com (D-Sketon)</author>
+      <guid>http://localhost:1313/post/2026-03-16-%E6%80%BB%E7%BB%93/</guid>
+      <description>
+        <![CDATA[<h1>20260316总结</h1><p>作者：D-Sketon（xxx@example.com）</p>
+        
+          <h1 id="一数据结构使用cpp重写">
+<a class="header-anchor" href="#%e4%b8%80%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84%e4%bd%bf%e7%94%a8cpp%e9%87%8d%e5%86%99"></a>
+一、数据结构(使用cpp重写)
+</h1><h1 id="二异常">
+<a class="header-anchor" href="#%e4%ba%8c%e5%bc%82%e5%b8%b8"></a>
+二、异常
+</h1><h2 id="throw-抛出">
+<a class="header-anchor" href="#throw-%e6%8a%9b%e5%87%ba"></a>
+throw 抛出
+</h2><p>直接抛出，可以是任意的</p>
+<h2 id="catch-捕获">
+<a class="header-anchor" href="#catch-%e6%8d%95%e8%8e%b7"></a>
+catch 捕获
+</h2><ul>
+<li>捕获异常类</li>
+<li>catch(&hellip;)来捕获不确定异常</li>
+<li>可以在{}中直接加入throw再抛出异常</li>
+</ul>
+        
+        <hr><p>本文2026-03-16首发于<a href='http://localhost:1313/'>My Notes</a>，最后修改于2026-03-16</p>]]>
+      </description>
+      
+    </item>
     
     
 
