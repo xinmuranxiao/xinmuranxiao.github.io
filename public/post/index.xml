@@ -12,12 +12,146 @@
     
     <copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright>
     
-    <lastBuildDate>Tue, 17 Mar 2026 21:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 18 Mar 2026 12:00:00 +0800</lastBuildDate>
     
     
     <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss&#43;xml" />
     
 
+    
+    
+
+    <item>
+      <title>20260318总结</title>
+      <link>http://localhost:1313/post/2026-03-18-%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Wed, 18 Mar 2026 12:00:00 &#43;0800</pubDate>
+      <author>xxx@example.com (D-Sketon)</author>
+      <guid>http://localhost:1313/post/2026-03-18-%E6%80%BB%E7%BB%93/</guid>
+      <description>
+        <![CDATA[<h1>20260318总结</h1><p>作者：D-Sketon（xxx@example.com）</p>
+        
+          <h1 id="一解决了错误码抛出异常">
+<a class="header-anchor" href="#%e4%b8%80%e8%a7%a3%e5%86%b3%e4%ba%86%e9%94%99%e8%af%af%e7%a0%81%e6%8a%9b%e5%87%ba%e5%bc%82%e5%b8%b8"></a>
+一、解决了错误码抛出异常
+</h1><h1 id="二算法和数据解构的分类左程云">
+<a class="header-anchor" href="#%e4%ba%8c%e7%ae%97%e6%b3%95%e5%92%8c%e6%95%b0%e6%8d%ae%e8%a7%a3%e6%9e%84%e7%9a%84%e5%88%86%e7%b1%bb%e5%b7%a6%e7%a8%8b%e4%ba%91"></a>
+二、算法和数据解构的分类(左程云)
+</h1><h2 id="1算法">
+<a class="header-anchor" href="#1%e7%ae%97%e6%b3%95"></a>
+(1)算法
+</h2><h3 id="1硬计算算法所有类的">
+<a class="header-anchor" href="#1%e7%a1%ac%e8%ae%a1%e7%ae%97%e7%ae%97%e6%b3%95%e6%89%80%e6%9c%89%e7%b1%bb%e7%9a%84"></a>
+1.硬计算算法(所有类的)
+</h3><p>acm，大厂面试</p>
+<h3 id="2软计算类计算">
+<a class="header-anchor" href="#2%e8%bd%af%e8%ae%a1%e7%ae%97%e7%b1%bb%e8%ae%a1%e7%ae%97"></a>
+2.软计算类计算
+</h3><p>模糊类的，ai之类的</p>
+        
+        <hr><p>本文2026-03-18首发于<a href='http://localhost:1313/'>My Notes</a>，最后修改于2026-03-18</p>]]>
+      </description>
+      
+    </item>
+    
+    
+
+    <item>
+      <title>文章总览</title>
+      <link>http://localhost:1313/post/2026-03%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Mon, 09 Mar 2026 14:00:00 &#43;0800</pubDate>
+      <author>xxx@example.com (D-Sketon)</author>
+      <guid>http://localhost:1313/post/2026-03%E6%80%BB%E7%BB%93/</guid>
+      <description>
+        <![CDATA[<h1>文章总览</h1><p>作者：D-Sketon（xxx@example.com）</p>
+        
+          <h1 id="xinmuranxiaogithubio">
+<a class="header-anchor" href="#xinmuranxiaogithubio"></a>
+xinmuranxiao.github.io
+</h1><h3 id="ps应该也没人看将这个仓库浅浅的记录一下我每天的学习主要以c为例">
+<a class="header-anchor" href="#ps%e5%ba%94%e8%af%a5%e4%b9%9f%e6%b2%a1%e4%ba%ba%e7%9c%8b%e5%b0%86%e8%bf%99%e4%b8%aa%e4%bb%93%e5%ba%93%e6%b5%85%e6%b5%85%e7%9a%84%e8%ae%b0%e5%bd%95%e4%b8%80%e4%b8%8b%e6%88%91%e6%af%8f%e5%a4%a9%e7%9a%84%e5%ad%a6%e4%b9%a0%e4%b8%bb%e8%a6%81%e4%bb%a5c%e4%b8%ba%e4%be%8b"></a>
+(PS：应该也没人看，将这个仓库浅浅的记录一下我每天的学习，主要以c++为例)
+</h3><h2 id="2026310">
+<a class="header-anchor" href="#2026310"></a>
+2026.3.10
+</h2><ul>
+<li>第一次写有点紧张；就将这个仓库浅浅的记录一下我每天的学习。</li>
+<li>1.学习了b站的up左程云的算法入门1、3(1-7)</li>
+</ul>
+<h2 id="2026311">
+<a class="header-anchor" href="#2026311"></a>
+2026.3.11
+</h2><ul>
+<li>1.熟悉了git,以及各种乱七八糟的玩意，终于在网页显示了&quot;笔记&quot;二字😭！</li>
+<li>2.写了数据结构的线性表的创建，末端增加，插入，删除，查看，释放。</li>
+<li>3.学习了b站的up左程云的算法入门3(8-12)、5</li>
+</ul>
+<h2 id="2026312">
+<a class="header-anchor" href="#2026312"></a>
+2026.3.12
+</h2><ul>
+<li>1.数据结构(链表)</li>
+<li>2.套了个框架，然后就有了这个。</li>
+<li>3.数据结构(二叉树)(定义)</li>
+</ul>
+<h2 id="2026313">
+<a class="header-anchor" href="#2026313"></a>
+2026.3.13
+</h2><ul>
+<li>1.数据结构(二叉树)//b站的逊老师</li>
+<li>2.一些小问题(class VS struct&amp;&amp;map VS pair)</li>
+<li>3.c++(参数模版化和类模版的继承)</li>
+</ul>
+<h2 id="2026314">
+<a class="header-anchor" href="#2026314"></a>
+2026.3.14
+</h2><ul>
+<li>1.数据结构(线性表cpp(结构,构造))</li>
+<li>2.一些小问题(throw VS return(返回错误))</li>
+</ul>
+<h1 id="2026316">
+<a class="header-anchor" href="#2026316"></a>
+2026.3.16
+</h1><ul>
+<li>1.数据结构(线性表cpp(构造,插入,删除))</li>
+<li>2.异常</li>
+</ul>
+<h1 id="2026317">
+<a class="header-anchor" href="#2026317"></a>
+2026.3.17
+</h1><ul>
+<li>1.异常的抛出</li>
+</ul>
+<h1 id="2026318">
+<a class="header-anchor" href="#2026318"></a>
+2026.3.18
+</h1><ul>
+<li>1.成功实现了错误码在线性表构造错误时抛出string</li>
+</ul>
+<h1 id="错误码个人">
+<a class="header-anchor" href="#%e9%94%99%e8%af%af%e7%a0%81%e4%b8%aa%e4%ba%ba"></a>
+错误码(个人)
+</h1><h2 id="100-200数组">
+<a class="header-anchor" href="#100-200%e6%95%b0%e7%bb%84"></a>
+100-200(数组)
+</h2><ul>
+<li>101:传入大小问题有问题</li>
+<li>102:索引越界</li>
+</ul>
+<h2 id="200-300指针">
+<a class="header-anchor" href="#200-300%e6%8c%87%e9%92%88"></a>
+200-300(指针)
+</h2><ul>
+<li>201:空指针</li>
+</ul>
+<h1 id="我的个人博客">
+<a class="header-anchor" href="#%e6%88%91%e7%9a%84%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2"></a>
+我的个人博客
+</h1><p>本博客基于 Hugo 静态站点生成器开发，使用 D-Sketon 开发的 hugo-theme-reimu 主题模板。</p>
+        
+        <hr><p>本文2026-03-09首发于<a href='http://localhost:1313/'>My Notes</a>，最后修改于2026-03-17</p>]]>
+      </description>
+      
+    </item>
     
     
 
@@ -151,71 +285,6 @@ catch 捕获
 </span></span></code></pre></div>
         
         <hr><p>本文2026-03-15首发于<a href='http://localhost:1313/'>My Notes</a>，最后修改于2026-03-15</p>]]>
-      </description>
-      
-    </item>
-    
-    
-
-    <item>
-      <title>文章总览</title>
-      <link>http://localhost:1313/post/2026-03%E6%80%BB%E7%BB%93/</link>
-      <pubDate>Mon, 09 Mar 2026 14:00:00 &#43;0800</pubDate>
-      <author>xxx@example.com (D-Sketon)</author>
-      <guid>http://localhost:1313/post/2026-03%E6%80%BB%E7%BB%93/</guid>
-      <description>
-        <![CDATA[<h1>文章总览</h1><p>作者：D-Sketon（xxx@example.com）</p>
-        
-          <h1 id="xinmuranxiaogithubio">
-<a class="header-anchor" href="#xinmuranxiaogithubio"></a>
-xinmuranxiao.github.io
-</h1><h3 id="ps应该也没人看将这个仓库浅浅的记录一下我每天的学习主要以c为例">
-<a class="header-anchor" href="#ps%e5%ba%94%e8%af%a5%e4%b9%9f%e6%b2%a1%e4%ba%ba%e7%9c%8b%e5%b0%86%e8%bf%99%e4%b8%aa%e4%bb%93%e5%ba%93%e6%b5%85%e6%b5%85%e7%9a%84%e8%ae%b0%e5%bd%95%e4%b8%80%e4%b8%8b%e6%88%91%e6%af%8f%e5%a4%a9%e7%9a%84%e5%ad%a6%e4%b9%a0%e4%b8%bb%e8%a6%81%e4%bb%a5c%e4%b8%ba%e4%be%8b"></a>
-(PS：应该也没人看，将这个仓库浅浅的记录一下我每天的学习，主要以c++为例)
-</h3><h2 id="2026310">
-<a class="header-anchor" href="#2026310"></a>
-2026.3.10
-</h2><ul>
-<li>第一次写有点紧张；就将这个仓库浅浅的记录一下我每天的学习。</li>
-<li>1.学习了b站的up左程云的算法入门1、3(1-7)</li>
-</ul>
-<h2 id="2026311">
-<a class="header-anchor" href="#2026311"></a>
-2026.3.11
-</h2><ul>
-<li>1.熟悉了git,以及各种乱七八糟的玩意，终于在网页显示了&quot;笔记&quot;二字😭！</li>
-<li>2.写了数据结构的线性表的创建，末端增加，插入，删除，查看，释放。</li>
-<li>3.学习了b站的up左程云的算法入门3(8-12)、5</li>
-</ul>
-<h2 id="2026312">
-<a class="header-anchor" href="#2026312"></a>
-2026.3.12
-</h2><ul>
-<li>1.数据结构(链表)</li>
-<li>2.套了个框架，然后就有了这个。</li>
-<li>3.数据结构(二叉树)(定义)</li>
-</ul>
-<h2 id="2026313">
-<a class="header-anchor" href="#2026313"></a>
-2026.3.13
-</h2><ul>
-<li>1.数据结构(二叉树)//b站的逊老师</li>
-<li>2.一些小问题(class VS struct&amp;&amp;map VS pair)</li>
-<li>3.c++(参数模版化和类模版的继承)</li>
-</ul>
-<h2 id="2026314">
-<a class="header-anchor" href="#2026314"></a>
-2026.3.14
-</h2><ul>
-<li>1.数据结构(线性表cpp)</li>
-<li>2.一些小问题(throw VS return(返回错误))</li>
-</ul>
-<h1 id="我的个人博客">
-<a class="header-anchor" href="#%e6%88%91%e7%9a%84%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2"></a>
-我的个人博客
-</h1><p>本博客基于 Hugo 静态站点生成器开发，使用 D-Sketon 开发的 hugo-theme-reimu 主题模板。</p>
-        
-        <hr><p>本文2026-03-09首发于<a href='http://localhost:1313/'>My Notes</a>，最后修改于2026-03-14</p>]]>
       </description>
       
     </item>
@@ -382,37 +451,6 @@ xinmuranxiao.github.io
 </h2><p>都使用指针，创建两个指针指向数据体和结构</p>
         
         <hr><p>本文2026-03-11首发于<a href='http://localhost:1313/'>My Notes</a>，最后修改于2026-03-11</p>]]>
-      </description>
-      
-    </item>
-    
-    
-
-    <item>
-      <title>20260310总结</title>
-      <link>http://localhost:1313/post/2026-03-10-%E6%80%BB%E7%BB%93/</link>
-      <pubDate>Tue, 10 Mar 2026 12:00:00 &#43;0800</pubDate>
-      <author>xxx@example.com (D-Sketon)</author>
-      <guid>http://localhost:1313/post/2026-03-10-%E6%80%BB%E7%BB%93/</guid>
-      <description>
-        <![CDATA[<h1>20260310总结</h1><p>作者：D-Sketon（xxx@example.com）</p>
-        
-          <h1 id="一二进制和位运算1-7">
-<a class="header-anchor" href="#%e4%b8%80%e4%ba%8c%e8%bf%9b%e5%88%b6%e5%92%8c%e4%bd%8d%e8%bf%90%e7%ae%971-7"></a>
-一、二进制和位运算(1-7)
-</h1><h2 id="1二进制的概念">
-<a class="header-anchor" href="#1%e4%ba%8c%e8%bf%9b%e5%88%b6%e7%9a%84%e6%a6%82%e5%bf%b5"></a>
-1.二进制的概念
-</h2><p>类比十进制，二进制逢二进一，只含有01</p>
-<h2 id="2正负数的表达">
-<a class="header-anchor" href="#2%e6%ad%a3%e8%b4%9f%e6%95%b0%e7%9a%84%e8%a1%a8%e8%be%be"></a>
-2.正负数的表达
-</h2><h3 id="1无符号">
-<a class="header-anchor" href="#1%e6%97%a0%e7%ac%a6%e5%8f%b7"></a>
-(1)无符号
-</h3><p>直接所有为数权重相加(只有正数)</p>
-        
-        <hr><p>本文2026-03-10首发于<a href='http://localhost:1313/'>My Notes</a>，最后修改于2026-03-10</p>]]>
       </description>
       
     </item>
