@@ -12,12 +12,43 @@
     
     <copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright>
     
-    <lastBuildDate>Sun, 22 Mar 2026 12:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 24 Mar 2026 12:00:00 +0800</lastBuildDate>
     
     
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss&#43;xml" />
     
 
+    
+    
+
+    <item>
+      <title>20260324总结</title>
+      <link>http://localhost:1313/post/2026-03-24-%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Tue, 24 Mar 2026 12:00:00 &#43;0800</pubDate>
+      <author>xxx@example.com (D-Sketon)</author>
+      <guid>http://localhost:1313/post/2026-03-24-%E6%80%BB%E7%BB%93/</guid>
+      <description>
+        <![CDATA[<h1>20260324总结</h1><p>作者：D-Sketon（xxx@example.com）</p>
+        
+          <h1 id="跨文件不引用头文件实现函数跨命名空间类的调用">
+<a class="header-anchor" href="#%e8%b7%a8%e6%96%87%e4%bb%b6%e4%b8%8d%e5%bc%95%e7%94%a8%e5%a4%b4%e6%96%87%e4%bb%b6%e5%ae%9e%e7%8e%b0%e5%87%bd%e6%95%b0%e8%b7%a8%e5%91%bd%e5%90%8d%e7%a9%ba%e9%97%b4%e7%b1%bb%e7%9a%84%e8%b0%83%e7%94%a8"></a>
+跨文件(不引用头文件实现函数跨命名空间类的调用)
+</h1><div class="highlight" linenumbers="true"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">//使用using定义一个函数指针变量(以输出函数为例)
+</span></span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="n">Out</span><span class="o">=</span><span class="kt">void</span><span class="o">*</span><span class="p">(</span><span class="o">*</span><span class="p">)(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//------函数1.cpp----
+</span></span></span><span class="line"><span class="cl"><span class="n">Out</span> <span class="n">put</span><span class="o">=</span><span class="n">out</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//------函数2.cpp----
+</span></span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">out</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><ul>
+<li>这样就可以实现文件的不引用调用函数了</li>
+</ul>
+        
+        <hr><p>本文2026-03-24首发于<a href='http://localhost:1313/'>My Notes</a>，最后修改于2026-03-24</p>]]>
+      </description>
+      
+    </item>
     
     
 
@@ -168,8 +199,19 @@ xinmuranxiao.github.io
 <a class="header-anchor" href="#2026320"></a>
 2026.3.20
 </h1><ul>
-<li>
-<p>异常处理</p>
+<li>异常处理</li>
+<li>线性表cpp完成</li>
+</ul>
+<h1 id="2026322">
+<a class="header-anchor" href="#2026322"></a>
+2026.3.22
+</h1><ul>
+<li>开始制作一个卡牌游戏</li>
+</ul>
+<h1 id="我的个人博客">
+<a class="header-anchor" href="#%e6%88%91%e7%9a%84%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2"></a>
+我的个人博客
+</h1><p>本博客基于 Hugo 静态站点生成器开发，使用 D-Sketon 开发的 hugo-theme-reimu 主题模板。</p>
         
         <hr><p>本文2026-03-09首发于<a href='http://localhost:1313/'>My Notes</a>，最后修改于2026-03-17</p>]]>
       </description>
@@ -426,27 +468,6 @@ catch 捕获
 </h3><p>树中的一个独立单元</p>
         
         <hr><p>本文2026-03-13首发于<a href='http://localhost:1313/'>My Notes</a>，最后修改于2026-03-13</p>]]>
-      </description>
-      
-    </item>
-    
-    
-
-    <item>
-      <title>20260312总结</title>
-      <link>http://localhost:1313/post/2026-03-12-%E6%80%BB%E7%BB%93/</link>
-      <pubDate>Thu, 12 Mar 2026 21:00:00 &#43;0800</pubDate>
-      <author>xxx@example.com (D-Sketon)</author>
-      <guid>http://localhost:1313/post/2026-03-12-%E6%80%BB%E7%BB%93/</guid>
-      <description>
-        <![CDATA[<h1>20260312总结</h1><p>作者：D-Sketon（xxx@example.com）</p>
-        
-          <h1 id="一数据结构链表">
-<a class="header-anchor" href="#%e4%b8%80%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84%e9%93%be%e8%a1%a8"></a>
-一、数据结构(链表)
-</h1><p>见https://github.com/xinmuranxiao/DataStruct_DoublyLinkedList</p>
-        
-        <hr><p>本文2026-03-12首发于<a href='http://localhost:1313/'>My Notes</a>，最后修改于2026-03-12</p>]]>
       </description>
       
     </item>
