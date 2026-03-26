@@ -12,12 +12,35 @@
     
     <copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright>
     
-    <lastBuildDate>Wed, 25 Mar 2026 12:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 26 Mar 2026 12:00:00 +0800</lastBuildDate>
     
     
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss&#43;xml" />
     
 
+    
+    
+
+    <item>
+      <title>20260326总结</title>
+      <link>http://localhost:1313/post/2026-03-26-%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Thu, 26 Mar 2026 12:00:00 &#43;0800</pubDate>
+      <author>xxx@example.com (D-Sketon)</author>
+      <guid>http://localhost:1313/post/2026-03-26-%E6%80%BB%E7%BB%93/</guid>
+      <description>
+        <![CDATA[<h1>20260326总结</h1><p>作者：D-Sketon（xxx@example.com）</p>
+        
+          <h1 id="cradvs读取文件">
+<a class="header-anchor" href="#cradvs%e8%af%bb%e5%8f%96%e6%96%87%e4%bb%b6"></a>
+CradVS读取文件
+</h1><ul>
+<li>可以读取了player文件了</li>
+</ul>
+        
+        <hr><p>本文2026-03-26首发于<a href='http://localhost:1313/'>My Notes</a>，最后修改于2026-03-26</p>]]>
+      </description>
+      
+    </item>
     
     
 
@@ -237,11 +260,17 @@ xinmuranxiao.github.io
 </h1><ul>
 <li>跨文件(不引用头文件实现函数跨命名空间类的调用)</li>
 </ul>
-<h1 id="2020325">
-<a class="header-anchor" href="#2020325"></a>
-2020.3.25
+<h1 id="2026325">
+<a class="header-anchor" href="#2026325"></a>
+2026.3.25
 </h1><ul>
 <li>CardVS update v0.5</li>
+</ul>
+<h1 id="2026326">
+<a class="header-anchor" href="#2026326"></a>
+2026.3.26
+</h1><ul>
+<li>CradVS读取文件</li>
 </ul>
 <h1 id="我的个人博客">
 <a class="header-anchor" href="#%e6%88%91%e7%9a%84%e4%b8%aa%e4%ba%ba%e5%8d%9a%e5%ae%a2"></a>
@@ -437,38 +466,6 @@ catch 捕获
 <a class="header-anchor" href="#2throwcpp%e9%a6%96%e9%80%89"></a>
 2.throw(cpp首选)
 </h3><p>处理不可预期、会中断流程的致命错误（适用于自定义返回错误）</p>
-        
-        <hr><p>本文2026-03-14首发于<a href='http://localhost:1313/'>My Notes</a>，最后修改于2026-03-14</p>]]>
-      </description>
-      
-    </item>
-    
-    
-
-    <item>
-      <title>2026-06目标</title>
-      <link>http://localhost:1313/post/2026-03-2026-07%E7%9B%AE%E6%A0%87/</link>
-      <pubDate>Sat, 14 Mar 2026 14:00:00 &#43;0800</pubDate>
-      <author>xxx@example.com (D-Sketon)</author>
-      <guid>http://localhost:1313/post/2026-03-2026-07%E7%9B%AE%E6%A0%87/</guid>
-      <description>
-        <![CDATA[<h1>2026-06目标</h1><p>作者：D-Sketon（xxx@example.com）</p>
-        
-          <h1 id="一mysql">
-<a class="header-anchor" href="#%e4%b8%80mysql"></a>
-一、MySQL
-</h1><p>练习MySQL</p>
-<h1 id="二git">
-<a class="header-anchor" href="#%e4%ba%8cgit"></a>
-二、Git
-</h1><p>练习</p>
-<h1 id="三学c模版">
-<a class="header-anchor" href="#%e4%b8%89%e5%ad%a6c%e6%a8%a1%e7%89%88"></a>
-三、学c++模版
-</h1><h1 id="四数据结构">
-<a class="header-anchor" href="#%e5%9b%9b%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84"></a>
-四、数据结构
-</h1>
         
         <hr><p>本文2026-03-14首发于<a href='http://localhost:1313/'>My Notes</a>，最后修改于2026-03-14</p>]]>
       </description>
