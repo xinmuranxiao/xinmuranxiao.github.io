@@ -12,12 +12,68 @@
     
     <copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright>
     
-    <lastBuildDate>Fri, 27 Mar 2026 12:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 28 Mar 2026 12:00:00 +0800</lastBuildDate>
     
     
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss&#43;xml" />
     
 
+    
+    
+
+    <item>
+      <title>20260328总结</title>
+      <link>http://localhost:1313/post/2026-3-30-%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Sat, 28 Mar 2026 12:00:00 &#43;0800</pubDate>
+      <author>xxx@example.com (D-Sketon)</author>
+      <guid>http://localhost:1313/post/2026-3-30-%E6%80%BB%E7%BB%93/</guid>
+      <description>
+        <![CDATA[<h1>20260328总结</h1><p>作者：D-Sketon（xxx@example.com）</p>
+        
+          <h1 id="dp以牛客1037d">
+<a class="header-anchor" href="#dp%e4%bb%a5%e7%89%9b%e5%ae%a21037d"></a>
+dp(以牛客1037D)
+</h1><ul>
+<li>设第i步染色</li>
+<li>当可以使用O(n²)可以使用dp</li>
+<li>可以从0-(i-1)开始染色</li>
+</ul>
+<div class="highlight" linenumbers="true"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include&lt;bits/stdc++.h&gt;
+</span></span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#define int long long
+</span></span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">solve</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">n</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="n">arr</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span><span class="n">s</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">        <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">^</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="n">dp</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">dp</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">m</span><span class="o">=</span><span class="mf">1e18</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="n">i</span><span class="p">;</span><span class="n">j</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">;</span><span class="n">j</span><span class="o">--</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">            <span class="n">m</span><span class="o">=</span><span class="n">min</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">dp</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">min</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">m</span><span class="o">+</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">^</span><span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]));</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">dp</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kt">signed</span> <span class="nf">main</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">t</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">t</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span><span class="p">(</span><span class="n">t</span><span class="o">--</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">solve</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
+        
+        <hr><p>本文2026-03-28首发于<a href='http://localhost:1313/'>My Notes</a>，最后修改于2026-03-28</p>]]>
+      </description>
+      
+    </item>
     
     
 
@@ -382,70 +438,6 @@ catch 捕获
 </ul>
         
         <hr><p>本文2026-03-16首发于<a href='http://localhost:1313/'>My Notes</a>，最后修改于2026-03-16</p>]]>
-      </description>
-      
-    </item>
-    
-    
-
-    <item>
-      <title>20260315总结</title>
-      <link>http://localhost:1313/post/2026-03-15-%E6%80%BB%E7%BB%93/</link>
-      <pubDate>Sun, 15 Mar 2026 08:00:00 &#43;0800</pubDate>
-      <author>xxx@example.com (D-Sketon)</author>
-      <guid>http://localhost:1313/post/2026-03-15-%E6%80%BB%E7%BB%93/</guid>
-      <description>
-        <![CDATA[<h1>20260315总结</h1><p>作者：D-Sketon（xxx@example.com）</p>
-        
-          <h1 id="一算法">
-<a class="header-anchor" href="#%e4%b8%80%e7%ae%97%e6%b3%95"></a>
-一、算法
-</h1><h2 id="1gcd最大公因数">
-<a class="header-anchor" href="#1gcd%e6%9c%80%e5%a4%a7%e5%85%ac%e5%9b%a0%e6%95%b0"></a>
-(1)gcd(最大公因数)
-</h2><h3 id="1while循环">
-<a class="header-anchor" href="#1while%e5%be%aa%e7%8e%af"></a>
-1.while循环
-</h3><div class="highlight" linenumbers="true"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">T</span><span class="o">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="n">T</span> <span class="n">gcd</span><span class="p">(</span><span class="n">T</span> <span class="n">i</span><span class="p">,</span><span class="n">T</span> <span class="n">j</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">    <span class="k">while</span><span class="p">(</span><span class="n">i</span><span class="o">!=</span><span class="mi">0</span><span class="p">){</span><span class="c1">//使用辗转相除
-</span></span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">temp</span><span class="o">=</span><span class="n">j</span><span class="o">%</span><span class="n">i</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="n">j</span><span class="o">=</span><span class="n">i</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">        <span class="n">i</span><span class="o">=</span><span class="n">temp</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">j</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><h3 id="2递归">
-<a class="header-anchor" href="#2%e9%80%92%e5%bd%92"></a>
-2.递归
-</h3><div class="highlight" linenumbers="true"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">T</span><span class="o">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="n">T</span> <span class="n">gcd</span><span class="p">(</span><span class="n">T</span> <span class="n">a</span><span class="p">,</span> <span class="n">T</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">?</span> <span class="nl">a</span> <span class="p">:</span> <span class="n">gcd</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">%</span> <span class="n">b</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><h2 id="2使用pair存储分数中重载运算符需使用gcd函数cpp14以上好像支出原生gcd">
-<a class="header-anchor" href="#2%e4%bd%bf%e7%94%a8pair%e5%ad%98%e5%82%a8%e5%88%86%e6%95%b0%e4%b8%ad%e9%87%8d%e8%bd%bd%e8%bf%90%e7%ae%97%e7%ac%a6%e9%9c%80%e4%bd%bf%e7%94%a8gcd%e5%87%bd%e6%95%b0cpp14%e4%bb%a5%e4%b8%8a%e5%a5%bd%e5%83%8f%e6%94%af%e5%87%ba%e5%8e%9f%e7%94%9fgcd"></a>
-(2)使用pair存储分数中重载运算符(需使用gcd函数(cpp14以上好像支出原生gcd))
-</h2><h3 id="heading">
-<a class="header-anchor" href="#heading"></a>
-+：
-</h3><div class="highlight" linenumbers="true"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">T</span><span class="o">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="n">pair</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="n">T</span><span class="o">&gt;</span> <span class="k">operator</span><span class="o">+</span><span class="p">(</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">a</span><span class="p">,</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">b</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">    <span class="n">T</span> <span class="n">g</span><span class="o">=</span><span class="n">gcd</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">first</span><span class="o">*</span><span class="n">b</span><span class="p">.</span><span class="n">second</span><span class="o">+</span><span class="n">a</span><span class="p">.</span><span class="n">second</span><span class="o">*</span><span class="n">b</span><span class="p">.</span><span class="n">first</span><span class="p">,</span><span class="n">a</span><span class="p">.</span><span class="n">second</span><span class="o">*</span><span class="n">b</span><span class="p">.</span><span class="n">second</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">pair</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="n">T</span><span class="o">&gt;</span><span class="n">f</span><span class="o">=</span><span class="p">{(</span><span class="n">a</span><span class="p">.</span><span class="n">first</span><span class="o">*</span><span class="n">b</span><span class="p">.</span><span class="n">second</span><span class="o">+</span><span class="n">a</span><span class="p">.</span><span class="n">second</span><span class="o">*</span><span class="n">b</span><span class="p">.</span><span class="n">first</span><span class="p">)</span><span class="o">/</span><span class="n">g</span><span class="p">,</span><span class="n">a</span><span class="p">.</span><span class="n">second</span><span class="o">*</span><span class="n">b</span><span class="p">.</span><span class="n">second</span><span class="o">/</span><span class="n">g</span><span class="p">};</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">f</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><h3 id="heading-1">
-<a class="header-anchor" href="#heading-1"></a>
-*：
-</h3><div class="highlight" linenumbers="true"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">template</span><span class="o">&lt;</span><span class="k">class</span> <span class="nc">T</span><span class="o">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="n">pair</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="n">T</span><span class="o">&gt;</span> <span class="k">operator</span><span class="o">*</span><span class="p">(</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">a</span><span class="p">,</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">b</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">    <span class="n">T</span> <span class="n">g</span><span class="o">=</span><span class="n">gcd</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">first</span><span class="o">*</span><span class="n">b</span><span class="p">.</span><span class="n">first</span><span class="p">,</span><span class="n">a</span><span class="p">.</span><span class="n">second</span><span class="o">*</span><span class="n">b</span><span class="p">.</span><span class="n">second</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">pair</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="n">T</span><span class="o">&gt;</span><span class="n">f</span><span class="o">=</span><span class="p">{</span><span class="n">a</span><span class="p">.</span><span class="n">first</span><span class="o">*</span><span class="n">b</span><span class="p">.</span><span class="n">first</span><span class="o">/</span><span class="n">g</span><span class="p">,</span><span class="n">a</span><span class="p">.</span><span class="n">second</span><span class="o">*</span><span class="n">b</span><span class="p">.</span><span class="n">second</span><span class="o">/</span><span class="n">g</span><span class="p">};</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">f</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div>
-        
-        <hr><p>本文2026-03-15首发于<a href='http://localhost:1313/'>My Notes</a>，最后修改于2026-03-15</p>]]>
       </description>
       
     </item>
