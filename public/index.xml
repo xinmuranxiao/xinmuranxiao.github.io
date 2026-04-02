@@ -12,12 +12,58 @@
     
     <copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright>
     
-    <lastBuildDate>Wed, 01 Apr 2026 21:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 02 Apr 2026 12:00:00 +0800</lastBuildDate>
     
     
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss&#43;xml" />
     
 
+    
+    
+
+    <item>
+      <title>20260402总结</title>
+      <link>http://localhost:1313/post/2026-04-02-%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Thu, 02 Apr 2026 12:00:00 &#43;0800</pubDate>
+      <author>xxx@example.com (D-Sketon)</author>
+      <guid>http://localhost:1313/post/2026-04-02-%E6%80%BB%E7%BB%93/</guid>
+      <description>
+        <![CDATA[<h1>20260402总结</h1><p>作者：D-Sketon（xxx@example.com）</p>
+        
+          <h1 id="完成第一个角色文件的读取">
+<a class="header-anchor" href="#%e5%ae%8c%e6%88%90%e7%ac%ac%e4%b8%80%e4%b8%aa%e8%a7%92%e8%89%b2%e6%96%87%e4%bb%b6%e7%9a%84%e8%af%bb%e5%8f%96"></a>
+完成第一个角色文件的读取
+</h1><h1 id="学习multiset">
+<a class="header-anchor" href="#%e5%ad%a6%e4%b9%a0multiset"></a>
+学习multiset
+</h1><h2 id="属于库">
+<a class="header-anchor" href="#%e5%b1%9e%e4%ba%8e%e5%ba%93"></a>
+属于库：
+</h2><p>set</p>
+<h2 id="功能">
+<a class="header-anchor" href="#%e5%8a%9f%e8%83%bd"></a>
+功能
+</h2><ul>
+<li>类似vector</li>
+<li>可以存重复的数</li>
+<li>自动排序</li>
+</ul>
+<h2 id="函数">
+<a class="header-anchor" href="#%e5%87%bd%e6%95%b0"></a>
+函数
+</h2><h3 id="插入">
+<a class="header-anchor" href="#%e6%8f%92%e5%85%a5"></a>
+插入
+</h3><p>insert();</p>
+<h3 id="查找第一个大于x的数">
+<a class="header-anchor" href="#%e6%9f%a5%e6%89%be%e7%ac%ac%e4%b8%80%e4%b8%aa%e5%a4%a7%e4%ba%8ex%e7%9a%84%e6%95%b0"></a>
+查找第一个大于x的数
+</h3><p>upper_bound(x);</p>
+        
+        <hr><p>本文2026-04-02首发于<a href='http://localhost:1313/'>My Notes</a>，最后修改于2026-04-02</p>]]>
+      </description>
+      
+    </item>
     
     
 
@@ -270,40 +316,6 @@ CardVS update v0.5
 </ul>
         
         <hr><p>本文2026-03-22首发于<a href='http://localhost:1313/'>My Notes</a>，最后修改于2026-03-22</p>]]>
-      </description>
-      
-    </item>
-    
-    
-
-    <item>
-      <title>20260318总结</title>
-      <link>http://localhost:1313/post/2026-03-18-%E6%80%BB%E7%BB%93/</link>
-      <pubDate>Wed, 18 Mar 2026 12:00:00 &#43;0800</pubDate>
-      <author>xxx@example.com (D-Sketon)</author>
-      <guid>http://localhost:1313/post/2026-03-18-%E6%80%BB%E7%BB%93/</guid>
-      <description>
-        <![CDATA[<h1>20260318总结</h1><p>作者：D-Sketon（xxx@example.com）</p>
-        
-          <h1 id="一解决了错误码抛出异常">
-<a class="header-anchor" href="#%e4%b8%80%e8%a7%a3%e5%86%b3%e4%ba%86%e9%94%99%e8%af%af%e7%a0%81%e6%8a%9b%e5%87%ba%e5%bc%82%e5%b8%b8"></a>
-一、解决了错误码抛出异常
-</h1><h1 id="二算法和数据解构的分类左程云">
-<a class="header-anchor" href="#%e4%ba%8c%e7%ae%97%e6%b3%95%e5%92%8c%e6%95%b0%e6%8d%ae%e8%a7%a3%e6%9e%84%e7%9a%84%e5%88%86%e7%b1%bb%e5%b7%a6%e7%a8%8b%e4%ba%91"></a>
-二、算法和数据解构的分类(左程云)
-</h1><h2 id="1算法">
-<a class="header-anchor" href="#1%e7%ae%97%e6%b3%95"></a>
-(1)算法
-</h2><h3 id="1硬计算算法所有类的">
-<a class="header-anchor" href="#1%e7%a1%ac%e8%ae%a1%e7%ae%97%e7%ae%97%e6%b3%95%e6%89%80%e6%9c%89%e7%b1%bb%e7%9a%84"></a>
-1.硬计算算法(所有类的)
-</h3><p>acm，大厂面试</p>
-<h3 id="2软计算类计算">
-<a class="header-anchor" href="#2%e8%bd%af%e8%ae%a1%e7%ae%97%e7%b1%bb%e8%ae%a1%e7%ae%97"></a>
-2.软计算类计算
-</h3><p>模糊类的，ai之类的</p>
-        
-        <hr><p>本文2026-03-18首发于<a href='http://localhost:1313/'>My Notes</a>，最后修改于2026-03-18</p>]]>
       </description>
       
     </item>

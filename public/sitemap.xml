@@ -68,11 +68,16 @@
     <loc>http://localhost:1313/archives/</loc>
     <lastmod>2022-07-26T21:46:25+08:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/post/</loc>
+    <lastmod>2022-07-26T21:46:25+08:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/about/</loc>
     <lastmod>2022-06-09T20:12:52+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/friend/</loc>
     <lastmod>2022-06-09T20:12:52+08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/2026-04-02-%E6%80%BB%E7%BB%93/</loc>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url><url>
