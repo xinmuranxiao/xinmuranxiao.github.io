@@ -12,12 +12,81 @@
     
     <copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright>
     
-    <lastBuildDate>Sat, 22 Aug 2026 21:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 23 Aug 2026 21:00:00 +0800</lastBuildDate>
     
     
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss&#43;xml" />
     
 
+    
+    
+
+    <item>
+      <title>20260823 总结</title>
+      <link>http://localhost:1313/post/2026-08-23-%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Sun, 23 Aug 2026 08:00:00 &#43;0800</pubDate>
+      <author>xxx@example.com (D-Sketon)</author>
+      <guid>http://localhost:1313/post/2026-08-23-%E6%80%BB%E7%BB%93/</guid>
+      <description>
+        <![CDATA[<h1>20260823 总结</h1><p>作者：D-Sketon（xxx@example.com）</p>
+        
+          <h1 id="rust">
+<a class="header-anchor" href="#rust"></a>
+RUST
+</h1><h2 id="exit_flagloadorderingrelaxed">
+<a class="header-anchor" href="#exit_flagloadorderingrelaxed"></a>
+EXIT_FLAG.load(Ordering::Relaxed)
+</h2><ul>
+<li>原子地读取全局 <code>EXIT_FLAG</code> 的值，<code>Ordering::Relaxed</code> 表示只保证读取操作本身的原子性，不建立任何内存顺序保证。</li>
+</ul>
+<h2 id="mutex-vs-atomic">
+<a class="header-anchor" href="#mutex-vs-atomic"></a>
+Mutex VS Atomic
+</h2><ul>
+<li><code>Mutex</code> 适合保护<strong>复杂数据</strong>，比如 <code>HashMap</code>、<code>String</code>、结构体；它让线程“先拿锁再操作”，保证同一时刻只有一个线程在读写。</li>
+<li><code>AtomicBool</code> 只适合表示<strong>单个标志位</strong>，比如退出标志、开关状态；它用原子指令直接从内存读写，不需要锁。</li>
+</ul>
+<h2 id="unwrapvs">
+<a class="header-anchor" href="#unwrapvs"></a>
+unwrap()VS？
+</h2><ul>
+<li><code>unwrap()</code> 是从 <code>Result&lt;T, E&gt;</code> 或 <code>Option&lt;T&gt;</code> 中取出内部值的方法：有值就返回，是 <code>Err</code>/<code>None</code> 就直接 <code>panic!</code></li>
+<li>?`：出错就向上层返回错误，由调用方决定怎么处理，适合错误可恢复的场景</li>
+</ul>
+<h2 id="waitexit">
+<a class="header-anchor" href="#waitexit"></a>
+WaitExit
+</h2><h3 id="轮询">
+<a class="header-anchor" href="#%e8%bd%ae%e8%af%a2"></a>
+轮询
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="k">pub</span><span class="w"> </span><span class="k">fn</span> <span class="nf">WaitExit</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="o">!</span><span class="no">EXIT_FLAG</span><span class="p">.</span><span class="n">load</span><span class="p">(</span><span class="n">Ordering</span>::<span class="n">Relaxed</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">std</span>::<span class="n">thread</span>::<span class="n">sleep</span><span class="p">(</span><span class="n">std</span>::<span class="n">time</span>::<span class="n">Duration</span>::<span class="n">from_millis</span><span class="p">(</span><span class="mi">50</span><span class="p">));</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><ul>
+<li>轮询等待exit_flag退出信号</li>
+<li>轮询50ms</li>
+</ul>
+<h3 id="等待条件变量">
+<a class="header-anchor" href="#%e7%ad%89%e5%be%85%e6%9d%a1%e4%bb%b6%e5%8f%98%e9%87%8f"></a>
+等待条件变量
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="w">    </span><span class="k">pub</span><span class="w"> </span><span class="k">fn</span> <span class="nf">wait_exit</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">//获取退出信号的变量
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">flag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">EXIT_FLAG</span><span class="p">.</span><span class="n">lock</span><span class="p">().</span><span class="n">unwrap</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 标准 Condvar 等待模式：用 while 而不是 if，
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="o">!*</span><span class="n">flag</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">flag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">EXIT_CONDVAR</span><span class="p">.</span><span class="n">wait</span><span class="p">(</span><span class="n">flag</span><span class="p">).</span><span class="n">unwrap</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><hr>
+        
+        <hr><p>本文2026-08-23首发于<a href='http://localhost:1313/'>My Notes</a>，最后修改于2026-08-23</p>]]>
+      </description>
+      
+    </item>
     
     
 
@@ -149,7 +218,7 @@ PS:
 <a class="header-anchor" href="#pub-async-fn-write_framestreammut-tcpstreammsg_idu64bodyu8-stdioresult"></a>
 pub async fn write_frame(stream:&amp;mut TcpStream,msg_id:u64,body:&amp;[u8])-&gt;std::io::Result
 </h2><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="k">pub</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="k">fn</span> <span class="nf">write_frame</span><span class="p">(</span><span class="n">stream</span>: <span class="kp">&amp;</span><span class="nc">mut</span><span class="w"> </span><span class="n">TcpStream</span><span class="p">,</span><span class="w"> </span><span class="n">msg_id</span>: <span class="kt">u64</span><span class="p">,</span><span class="w"> </span><span class="n">body</span>: <span class="kp">&amp;</span><span class="p">[</span><span class="kt">u8</span><span class="p">])</span><span class="w"> </span>-&gt; <span class="nc">std</span>::<span class="n">io</span>::<span class="nb">Result</span><span class="o">&lt;</span><span class="p">()</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">buf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Vec</span>::<span class="n">with_capacity</span><span class="p">(</span><span class="no">HEAD_LENGTH</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">body</span><span class="p">.</span><span class="n">len</span><span class="p">());</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">buf</span><span class="p">.</span><span class="n">extend_from_slice</span><span class="p">(</span><span class="o">&amp;</span><span class="n">msg_id</span><span class="p">.</span><span class="n">to_be_bytes</span><span class="p">());</span><span class="w">
@@ -1456,87 +1525,6 @@ Console
 <hr>
         
         <hr><p>本文2026-08-11首发于<a href='http://localhost:1313/'>My Notes</a>，最后修改于2026-08-11</p>]]>
-      </description>
-      
-    </item>
-    
-    
-
-    <item>
-      <title>20260810 总结</title>
-      <link>http://localhost:1313/post/2026-08-10-%E6%80%BB%E7%BB%93/</link>
-      <pubDate>Mon, 10 Aug 2026 08:00:00 &#43;0800</pubDate>
-      <author>xxx@example.com (D-Sketon)</author>
-      <guid>http://localhost:1313/post/2026-08-10-%E6%80%BB%E7%BB%93/</guid>
-      <description>
-        <![CDATA[<h1>20260810 总结</h1><p>作者：D-Sketon（xxx@example.com）</p>
-        
-          <h1 id="rust">
-<a class="header-anchor" href="#rust"></a>
-RUST
-</h1><h2 id="枚举">
-<a class="header-anchor" href="#%e6%9e%9a%e4%b8%be"></a>
-枚举
-</h2><ul>
-<li>自定义数据类型</li>
-<li>允许我们列举所有值</li>
-<li>允许直接附加到结构体中</li>
-<li>常用于ip地址</li>
-</ul>
-<h3 id="定义">
-<a class="header-anchor" href="#%e5%ae%9a%e4%b9%89"></a>
-定义
-</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="k">enum</span> <span class="nc">IpAddrKind</span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">v4</span><span class="p">,</span><span class="n">v6</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="kd">let</span><span class="w"> </span><span class="n">four</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">IpAddrKind</span>::<span class="n">v4</span><span class="p">;</span><span class="w">
-</span></span></span></code></pre></div><ul>
-<li>也可以用impl为枚举定义方法</li>
-</ul>
-<h3 id="option">
-<a class="header-anchor" href="#option"></a>
-option
-</h3><ul>
-<li>定义于标注库</li>
-<li>Rust没有NULL，所以提供了Option<!-- raw HTML omitted -->的枚举</li>
-<li>可直接使用</li>
-<li>想使用Option[<!-- raw HTML omitted -->]，必须显示化T</li>
-</ul>
-<h3 id="match">
-<a class="header-anchor" href="#match"></a>
-match
-</h3><ul>
-<li>运行时，值和代码模式匹配</li>
-<li>可以作为模式的返回值继续返回</li>
-<li>匹配时必须穷举所有的可能型</li>
-</ul>
-<h4 id="绑定值">
-<a class="header-anchor" href="#%e7%bb%91%e5%ae%9a%e5%80%bc"></a>
-绑定值
-</h4><ul>
-<li>匹配分支可以匹配对象的部分值</li>
-</ul>
-<h3 id="if-let">
-<a class="header-anchor" href="#if-let"></a>
-if let
-</h3><ul>
-<li>针对一种模式匹配</li>
-</ul>
-<h1 id="连接池">
-<a class="header-anchor" href="#%e8%bf%9e%e6%8e%a5%e6%b1%a0"></a>
-连接池
-</h1><h2 id="单例的线程安全的">
-<a class="header-anchor" href="#%e5%8d%95%e4%be%8b%e7%9a%84%e7%ba%bf%e7%a8%8b%e5%ae%89%e5%85%a8%e7%9a%84"></a>
-单例的线程安全的
-</h2><h3 id="线程安全的方式有">
-<a class="header-anchor" href="#%e7%ba%bf%e7%a8%8b%e5%ae%89%e5%85%a8%e7%9a%84%e6%96%b9%e5%bc%8f%e6%9c%89"></a>
-线程安全的方式有：
-</h3><h4 id="1-互斥锁-stdmutex--stdlock_guard">
-<a class="header-anchor" href="#1-%e4%ba%92%e6%96%a5%e9%94%81-stdmutex--stdlock_guard"></a>
-1. 互斥锁 <code>std::mutex</code> + <code>std::lock_guard</code>
-</h4><p>最基础、最常用。保护一段临界区代码，同一时刻只有一个线程能进入。</p>
-        
-        <hr><p>本文2026-08-10首发于<a href='http://localhost:1313/'>My Notes</a>，最后修改于2026-08-10</p>]]>
       </description>
       
     </item>
