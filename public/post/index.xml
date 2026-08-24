@@ -12,7 +12,7 @@
     
     <copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright>
     
-    <lastBuildDate>Sat, 22 Aug 2026 21:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 24 Aug 2026 21:00:00 +0800</lastBuildDate>
     
     
     <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss&#43;xml" />
@@ -22,29 +22,86 @@
     
 
     <item>
-      <title>20260822 总结</title>
+      <title>20260824 总结</title>
+      <link>http://localhost:1313/post/2026-08-24-%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Mon, 24 Aug 2026 08:00:00 &#43;0800</pubDate>
+      <author>xxx@example.com (D-Sketon)</author>
+      <guid>http://localhost:1313/post/2026-08-24-%E6%80%BB%E7%BB%93/</guid>
+      <description>
+        <![CDATA[<h1>20260824 总结</h1><p>作者：D-Sketon（xxx@example.com）</p>
+        
+          
+        
+        <hr><p>本文2026-08-24首发于<a href='http://localhost:1313/'>My Notes</a>，最后修改于2026-08-24</p>]]>
+      </description>
+      
+    </item>
+    
+    
+
+    <item>
+      <title>20260823 总结</title>
       <link>http://localhost:1313/post/2026-08-23-%E6%80%BB%E7%BB%93/</link>
-      <pubDate>Sat, 22 Aug 2026 08:00:00 &#43;0800</pubDate>
+      <pubDate>Sun, 23 Aug 2026 08:00:00 &#43;0800</pubDate>
       <author>xxx@example.com (D-Sketon)</author>
       <guid>http://localhost:1313/post/2026-08-23-%E6%80%BB%E7%BB%93/</guid>
       <description>
-        <![CDATA[<h1>20260822 总结</h1><p>作者：D-Sketon（xxx@example.com）</p>
+        <![CDATA[<h1>20260823 总结</h1><p>作者：D-Sketon（xxx@example.com）</p>
         
           <h1 id="rust">
 <a class="header-anchor" href="#rust"></a>
 RUST
-</h1><h2 id="waitexit">
+</h1><h2 id="exit_flagloadorderingrelaxed">
+<a class="header-anchor" href="#exit_flagloadorderingrelaxed"></a>
+EXIT_FLAG.load(Ordering::Relaxed)
+</h2><ul>
+<li>原子地读取全局 <code>EXIT_FLAG</code> 的值，<code>Ordering::Relaxed</code> 表示只保证读取操作本身的原子性，不建立任何内存顺序保证。</li>
+</ul>
+<h2 id="mutex-vs-atomic">
+<a class="header-anchor" href="#mutex-vs-atomic"></a>
+Mutex VS Atomic
+</h2><ul>
+<li><code>Mutex</code> 适合保护<strong>复杂数据</strong>，比如 <code>HashMap</code>、<code>String</code>、结构体；它让线程“先拿锁再操作”，保证同一时刻只有一个线程在读写。</li>
+<li><code>AtomicBool</code> 只适合表示<strong>单个标志位</strong>，比如退出标志、开关状态；它用原子指令直接从内存读写，不需要锁。</li>
+</ul>
+<h2 id="unwrapvs">
+<a class="header-anchor" href="#unwrapvs"></a>
+unwrap()VS？
+</h2><ul>
+<li><code>unwrap()</code> 是从 <code>Result&lt;T, E&gt;</code> 或 <code>Option&lt;T&gt;</code> 中取出内部值的方法：有值就返回，是 <code>Err</code>/<code>None</code> 就直接 <code>panic!</code></li>
+<li>?`：出错就向上层返回错误，由调用方决定怎么处理，适合错误可恢复的场景</li>
+</ul>
+<h2 id="waitexit">
 <a class="header-anchor" href="#waitexit"></a>
 WaitExit
-</h2><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="k">pub</span><span class="w"> </span><span class="k">fn</span> <span class="nf">WaitExit</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</h2><h3 id="轮询">
+<a class="header-anchor" href="#%e8%bd%ae%e8%af%a2"></a>
+轮询
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="k">pub</span><span class="w"> </span><span class="k">fn</span> <span class="nf">WaitExit</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="o">!</span><span class="no">EXIT_FLAG</span><span class="p">.</span><span class="n">load</span><span class="p">(</span><span class="n">Ordering</span>::<span class="n">Relaxed</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">std</span>::<span class="n">thread</span>::<span class="n">sleep</span><span class="p">(</span><span class="n">std</span>::<span class="n">time</span>::<span class="n">Duration</span>::<span class="n">from_millis</span><span class="p">(</span><span class="mi">50</span><span class="p">));</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><ul>
+<li>轮询等待exit_flag退出信号</li>
+<li>轮询50ms</li>
+</ul>
+<h3 id="等待条件变量">
+<a class="header-anchor" href="#%e7%ad%89%e5%be%85%e6%9d%a1%e4%bb%b6%e5%8f%98%e9%87%8f"></a>
+等待条件变量
+</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="w">    </span><span class="k">pub</span><span class="w"> </span><span class="k">fn</span> <span class="nf">wait_exit</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">//获取退出信号的变量
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">flag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">EXIT_FLAG</span><span class="p">.</span><span class="n">lock</span><span class="p">().</span><span class="n">unwrap</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 标准 Condvar 等待模式：用 while 而不是 if，
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="o">!*</span><span class="n">flag</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">flag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">EXIT_CONDVAR</span><span class="p">.</span><span class="n">wait</span><span class="p">(</span><span class="n">flag</span><span class="p">).</span><span class="n">unwrap</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
 </span></span></span></code></pre></div><hr>
         
-        <hr><p>本文2026-08-22首发于<a href='http://localhost:1313/'>My Notes</a>，最后修改于2026-08-22</p>]]>
+        <hr><p>本文2026-08-23首发于<a href='http://localhost:1313/'>My Notes</a>，最后修改于2026-08-23</p>]]>
       </description>
       
     </item>
@@ -1313,179 +1370,6 @@ unity
 <hr>
         
         <hr><p>本文2026-08-12首发于<a href='http://localhost:1313/'>My Notes</a>，最后修改于2026-08-12</p>]]>
-      </description>
-      
-    </item>
-    
-    
-
-    <item>
-      <title>20260811 总结</title>
-      <link>http://localhost:1313/post/2026-08-11-%E6%80%BB%E7%BB%93/</link>
-      <pubDate>Tue, 11 Aug 2026 08:00:00 &#43;0800</pubDate>
-      <author>xxx@example.com (D-Sketon)</author>
-      <guid>http://localhost:1313/post/2026-08-11-%E6%80%BB%E7%BB%93/</guid>
-      <description>
-        <![CDATA[<h1>20260811 总结</h1><p>作者：D-Sketon（xxx@example.com）</p>
-        
-          <h1 id="rust">
-<a class="header-anchor" href="#rust"></a>
-RUST
-</h1><h2 id="package">
-<a class="header-anchor" href="#package"></a>
-package
-</h2><ul>
-<li>包含一个Cargo.toml</li>
-<li>有0-1个library crate</li>
-<li>包含任意数量的binary crate</li>
-<li>至少包含一个crate</li>
-</ul>
-<h3 id="代码组织">
-<a class="header-anchor" href="#%e4%bb%a3%e7%a0%81%e7%bb%84%e7%bb%87"></a>
-代码组织
-</h3><ul>
-<li>主要包括：</li>
-<li>哪些细节可以暴露，哪些细节是私有的</li>
-<li>作用域哪些名称有效</li>
-<li>package:cargop的特性，让你构建，测试，共享crate</li>
-<li>crate：模块数，产生宇哥library或者可执行文件</li>
-<li>module：控制组织，作用域，私有路径</li>
-<li>path：为struct、function、module命名</li>
-</ul>
-<h3 id="crate">
-<a class="header-anchor" href="#crate"></a>
-crate
-</h3><ul>
-<li>将相关的组合到一个作用域内</li>
-</ul>
-<h4 id="类型">
-<a class="header-anchor" href="#%e7%b1%bb%e5%9e%8b"></a>
-类型
-</h4><ul>
-<li>library</li>
-<li>binary</li>
-</ul>
-<h4 id="类型-1">
-<a class="header-anchor" href="#%e7%b1%bb%e5%9e%8b-1"></a>
-类型
-</h4><ul>
-<li>crate root</li>
-<li>默认为main.rs(可执行文件)/lib.rs(二进值文件)</li>
-</ul>
-<h3 id="moudle">
-<a class="header-anchor" href="#moudle"></a>
-moudle
-</h3><ul>
-<li>代码分组</li>
-<li>增加可读性</li>
-<li>控制私有性</li>
-</ul>
-<h4 id="建立">
-<a class="header-anchor" href="#%e5%bb%ba%e7%ab%8b"></a>
-建立
-</h4><ul>
-<li>mod关键字</li>
-<li>可嵌套</li>
-<li>可包含其他项定义</li>
-</ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="k">mod</span> <span class="nn">ftan</span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">mod</span> <span class="nn">sss</span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">fn</span> <span class="nf">asdasds</span><span class="p">(){}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">mod</span> <span class="nn">sss</span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">fn</span> <span class="nf">asdasds</span><span class="p">(){}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
-</span></span></span></code></pre></div><h3 id="路径">
-<a class="header-anchor" href="#%e8%b7%af%e5%be%84"></a>
-路径
-</h3><ul>
-<li>和其他语言的命名空间比较像</li>
-<li>绝对路径</li>
-<li>相对路径</li>
-<li>也用::去引用</li>
-</ul>
-<h4 id="私有边界">
-<a class="header-anchor" href="#%e7%a7%81%e6%9c%89%e8%be%b9%e7%95%8c"></a>
-私有边界
-</h4><ul>
-<li>默认所有的条目默认私有</li>
-</ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="k">pub</span><span class="w"> </span><span class="k">fn</span> <span class="nf">saldk</span><span class="p">(){}</span><span class="w">
-</span></span></span></code></pre></div><ul>
-<li>以上实现了一个公有的模块</li>
-</ul>
-<h3 id="super">
-<a class="header-anchor" href="#super"></a>
-super
-</h3><ul>
-<li>上级目录使用super模块</li>
-</ul>
-<h3 id="use关键字">
-<a class="header-anchor" href="#use%e5%85%b3%e9%94%ae%e5%ad%97"></a>
-use关键字
-</h3><ul>
-<li>可以用use将路径引用到当前路径</li>
-</ul>
-<h4 id="as">
-<a class="header-anchor" href="#as"></a>
-as
-</h4><ul>
-<li>可以将路径重命名</li>
-</ul>
-<h4 id="use重新导入作用域">
-<a class="header-anchor" href="#use%e9%87%8d%e6%96%b0%e5%af%bc%e5%85%a5%e4%bd%9c%e7%94%a8%e5%9f%9f"></a>
-use重新导入作用域
-</h4><ul>
-<li>pub use去重新导入，外部也可以使用</li>
-</ul>
-<h3 id="使用外部包">
-<a class="header-anchor" href="#%e4%bd%bf%e7%94%a8%e5%a4%96%e9%83%a8%e5%8c%85"></a>
-使用外部包
-</h3><ul>
-<li>在cargo.toml里加入</li>
-</ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="p">[</span><span class="n">dependencies</span><span class="p">]</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="n">package_name</span><span class="o">=</span><span class="s">&#34;package_version&#34;</span><span class="w">
-</span></span></span></code></pre></div><ul>
-<li>标准库也会作为外部包，外部条件仍然要引入</li>
-<li>使用嵌套路径，可以清理繁琐包引用</li>
-</ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="k">use</span><span class="w"> </span><span class="err">相同路径</span>::<span class="p">{</span><span class="err">不同的路径</span><span class="p">}</span><span class="w">
-</span></span></span></code></pre></div><h3 id="通配符">
-<a class="header-anchor" href="#%e9%80%9a%e9%85%8d%e7%ac%a6"></a>
-*(通配符)
-</h3><ul>
-<li>将所有的模块导入</li>
-</ul>
-<h3 id="如何拆分">
-<a class="header-anchor" href="#%e5%a6%82%e4%bd%95%e6%8b%86%e5%88%86"></a>
-如何拆分
-</h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="k">mod</span> <span class="nn">mod_name</span><span class="p">{}</span><span class="w">
-</span></span></span></code></pre></div><ul>
-<li>就可以导入文件了</li>
-</ul>
-<hr>
-<h1 id="unity">
-<a class="header-anchor" href="#unity"></a>
-unity
-</h1><h2 id="inspector">
-<a class="header-anchor" href="#inspector"></a>
-inspector
-</h2><ul>
-<li>选中则显示游戏对象关联的脚本信息</li>
-<li>信息下面是脚本（组件）-类</li>
-<li>用面向对象的方式去做角色设置</li>
-</ul>
-<h2 id="console">
-<a class="header-anchor" href="#console"></a>
-Console
-</h2><ul>
-<li>有打印信息才可以快捷打开</li>
-</ul>
-<hr>
-        
-        <hr><p>本文2026-08-11首发于<a href='http://localhost:1313/'>My Notes</a>，最后修改于2026-08-11</p>]]>
       </description>
       
     </item>
